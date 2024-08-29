@@ -1,0 +1,78 @@
+{{# 
+  Tracking Scripts
+#}}
+
+<script>
+  window.tracking = {
+    "cookieBannerText": "{{seo:cookie_banner_text}}",
+    "trackingIsActive": false
+  }
+</script>
+{{? $trackingEnv = $config["app"]["env"];  ?}}
+
+{{ if seo:use_cookie_banner }}
+  
+  {{ if (seo:trackers_local && trackingEnv == "local") || (seo:trackers_stagging && trackingEnv == "stagging") || (seo:trackers_production && trackingEnv == "production") }}
+    
+  <script>window.tracking.trackingIsActive = true</script>
+
+    <!-- Global site tag - Google Tag Manager -->
+    {{ if seo:google_tag_manager_toggle }}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ seo:google_tag_manager_id }}"></script>
+      <script
+        type="text/plain"
+        data-category="analytics"
+        data-service="GoogleTagManager"
+      >
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ seo:google_tag_manager_id }}');
+      </script>
+    {{ /if }}
+
+    {{ if seo:facebook_pixel_toggle }}
+
+      <!-- Facebook Pixel Code -->
+      <script
+        type="text/plain"
+        data-category="analytics"
+        data-service="FacebookPixel"
+      >
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'
+        n.queue=[];t=b.createElement(e);t.async=!0
+        t.src=v;s=b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js')
+        fbq('init', '{{ seo:facebook_pixel_id }}')
+        fbq('track', 'PageView')
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id={{ seo:facebook_pixel_id }}&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- End Facebook Pixel Code -->
+    {{ /if  }}
+
+    {{ if seo:google_analytics_toggle }}
+
+      <!-- Global site tag - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ seo:google_analytics_id }}"></script>
+      <script
+        type="text/plain"
+        data-category="analytics"
+        data-service="GoogleAnalytics"
+      >
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ seo:google_analytics_id }}');
+      </script>
+    {{ /if  }}
+
+  {{ /if }}
+{{ /if }}

@@ -1,0 +1,93 @@
+admin:
+  title: Admin
+  permissions:
+    - super
+  preferences:
+    nav:
+      content:
+        reorder: true
+        items:
+          'content::collections': '@inherit'
+          'content::globals':
+            action: '@modify'
+            reorder: true
+            url: globals/configuration
+            children:
+              'content::globals::configuration': '@inherit'
+              'content::globals::seo': '@inherit'
+          'content::navigation': '@inherit'
+          'content::assets': '@inherit'
+          'content::taxonomies': '@hide'
+      tools:
+        'tools::forms': '@hide'
+        'tools::addons': '@hide'
+editor:
+  title: Editor
+  permissions:
+    - 'access cp'
+    - 'access fr_ca site'
+    - 'access en_us site'
+    - 'view employees entries'
+    - 'edit employees entries'
+    - 'create employees entries'
+    - 'delete employees entries'
+    - 'publish employees entries'
+    - 'reorder employees entries'
+    - 'edit other authors employees entries'
+    - 'publish other authors employees entries'
+    - 'delete other authors employees entries'
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'create pages entries'
+    - 'delete pages entries'
+    - 'publish pages entries'
+    - 'edit other authors pages entries'
+    - 'publish other authors pages entries'
+    - 'delete other authors pages entries'
+    - 'configure navs'
+    - 'view footer nav'
+    - 'edit footer nav'
+    - 'view header nav'
+    - 'edit header nav'
+    - 'edit redirects globals'
+    - 'edit seo globals'
+    - 'edit configuration globals'
+    - 'view assets assets'
+    - 'upload assets assets'
+    - 'edit assets assets'
+    - 'move assets assets'
+    - 'rename assets assets'
+    - 'delete assets assets'
+    - 'view users'
+    - 'access cache utility'
+  preferences:
+    nav:
+      content:
+        reorder: true
+        items:
+          'content::collections': '@inherit'
+          'content::globals':
+            url: globals/configuration
+            action: '@modify'
+            reorder: true
+            children:
+              'content::globals::configuration': '@inherit'
+              'content::globals::seo': '@inherit'
+          'content::navigation': '@inherit'
+          'content::assets': '@inherit'
+          'content::taxonomies': '@hide'
+      fields: '@hide'
+      tools:
+        'tools::updates': '@hide'
+        'tools::addons': '@hide'
+        'tools::utilities':
+          action: '@modify'
+          children:
+            'tools::utilities::email': '@hide'
+            'tools::utilities::licensing': '@hide'
+            'tools::utilities::php_info': '@hide'
+            'tools::utilities::search': '@hide'
+      settings: '@hide'
+      users:
+        'users::groups': '@hide'
+        'users::permissions': '@hide'

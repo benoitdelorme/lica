@@ -1,0 +1,42 @@
+title: Common
+fields:
+  -
+    handle: button
+    field:
+      fullscreen: false
+      type: group
+      display: Button
+      localizable: false
+      fields:
+        -
+          handle: button_text
+          field:
+            type: text
+            display: Text
+            localizable: false
+            width: 50
+        -
+          handle: button_link
+          field:
+            type: link
+            display: Link
+            localizable: false
+            width: 50
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      folder: images
+      type: assets
+      display: Image
+      localizable: false
+      validate:
+        - image
+  -
+    handle: anchor
+    field:
+      type: text
+      display: Anchor
+      localizable: false
+      prepend: '#'

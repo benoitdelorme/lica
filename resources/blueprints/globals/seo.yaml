@@ -1,0 +1,322 @@
+tabs:
+  page_titles:
+    display: 'Page meta'
+    sections:
+      -
+        fields:
+          -
+            handle: section_title
+            field:
+              type: section
+              instructions: 'Website and page titles'
+              display: Title
+              localizable: false
+          -
+            handle: title_separator
+            field:
+              options:
+                ' | ': '|'
+                ' - ': '-'
+                ' / ': /
+                ' :: ': '::'
+                ' > ': '>'
+                ' ~ ': '~'
+              localizable: true
+              type: select
+              instructions: 'Select the character to separate the page title and site title.'
+              instructions_position: below
+              width: 33
+              display: Separator
+          -
+            handle: site_name
+            field:
+              type: text
+              localizable: true
+              display: 'Website title'
+              instructions: "The title for the website. Defaults to Laravel's App Name."
+              instructions_position: below
+              width: 66
+          -
+            handle: seo_description
+            field:
+              type: textarea
+              display: Description
+              localizable: true
+          -
+            handle: section_environments_noindex
+            field:
+              type: section
+              instructions: 'When activated noindex and nofollow.'
+              display: Environments
+              localizable: false
+          -
+            handle: noindex_local
+            field:
+              type: toggle
+              instructions_position: below
+              listable: false
+              display: Local
+              width: 33
+              localizable: false
+          -
+            handle: noindex_staging
+            field:
+              type: toggle
+              instructions_position: below
+              listable: false
+              display: Staging
+              width: 33
+              localizable: false
+          -
+            handle: noindex_production
+            field:
+              type: toggle
+              instructions_position: below
+              listable: false
+              display: Production
+              width: 33
+              localizable: false
+  social:
+    display: 'Social Sharing'
+    sections:
+      -
+        fields:
+          -
+            handle: section_og
+            field:
+              type: section
+              instructions: 'Default settings for Social Sharing.'
+              display: Defaults
+              localizable: false
+          -
+            handle: og_image
+            field:
+              max_files: 1
+              type: assets
+              always_save: false
+              container: assets
+              localizable: true
+              display: 'Social image'
+              instructions_position: below
+              instructions: 'The default OG image. Can be overridden per entry. The recommended size is 1200px x 630px. This image will be focal cropped to this dimension.'
+              width: 50
+          -
+            handle: twitter_image
+            field:
+              max_files: 1
+              type: assets
+              always_save: false
+              container: assets
+              localizable: true
+              display: 'X image'
+              instructions_position: below
+              instructions: 'The default X image. Can be overridden per entry. Images should have an aspect ratio of 2:1 with minimum dimensions of 300x157. This image will be focal cropped to this dimension.'
+              width: 50
+          -
+            handle: twitter_handle
+            field:
+              display: 'X handle'
+              width: 50
+              type: text
+              localizable: true
+              instructions: 'The X user name that should be included with X Card tags.'
+              instructions_position: below
+              prepend: '@'
+  sitemap:
+    display: Sitemap
+    sections:
+      -
+        fields:
+          -
+            handle: section_sitemap
+            field:
+              type: section
+              instructions: 'Configure the sitemap.xml'
+              display: Sitemap
+              localizable: false
+          -
+            handle: sitemap_collections
+            field:
+              mode: select
+              type: collections
+              instructions: 'Select which collections to include in the sitemap.xml.'
+              default: pages
+              display: Collections
+              localizable: true
+  trackers:
+    display: Trackers
+    sections:
+      -
+        fields:
+          -
+            handle: section_environments
+            field:
+              type: section
+              instructions: 'When to render tracker tags and the cookie banner.'
+              display: Environments
+              localizable: true
+          -
+            handle: trackers_local
+            field:
+              type: toggle
+              listable: false
+              display: Local
+              width: 33
+              localizable: true
+          -
+            handle: trackers_staging
+            field:
+              type: toggle
+              listable: false
+              display: Staging
+              width: 33
+              localizable: true
+          -
+            handle: trackers_production
+            field:
+              type: toggle
+              listable: false
+              display: Production
+              width: 33
+              localizable: true
+      -
+        fields:
+          -
+            handle: consent
+            field:
+              type: section
+              display: Consent
+              instructions: 'This is mandatory if you use trackers on the page. Without this option, no trackers will be added.'
+              localizable: true
+          -
+            handle: use_cookie_banner
+            field:
+              type: toggle
+              instructions_position: below
+              listable: false
+              display: 'Cookie banner'
+              localizable: true
+          -
+            handle: cookie_banner_text
+            field:
+              type: textarea
+              display: Text
+              localizable: true
+              if:
+                use_cookie_banner: 'equals true'
+      -
+        fields:
+          -
+            handle: section_verification
+            field:
+              type: section
+              instructions: 'Configure site verifications.'
+              display: 'Site verifications'
+              localizable: true
+          -
+            handle: use_google_site_verification
+            field:
+              type: toggle
+              instructions: 'Add a google-site-verification meta tag to your head.'
+              listable: false
+              display: 'Google site verification'
+              localizable: true
+              width: 50
+          -
+            handle: google_site_verification
+            field:
+              type: text
+              width: 50
+              display: 'Verification key'
+              validate:
+                - 'required_if:use_google_site_verification,true'
+              if:
+                use_google_site_verification: 'equals true'
+              localizable: true
+      -
+        fields:
+          -
+            handle: facebook_pixel_section
+            field:
+              type: section
+              display: 'Facebook Pixel'
+              localizable: true
+          -
+            handle: facebook_pixel_toggle
+            field:
+              type: toggle
+              instructions: 'Add Plausible tracking code to your head.'
+              listable: false
+              display: 'Facebook Pixel'
+              width: 50
+              localizable: true
+          -
+            handle: facebook_pixel_id
+            field:
+              width: 50
+              display: 'Tracking ID'
+              type: text
+              instructions_position: below
+              validate:
+                - 'required_if:tracker_type,gtag'
+              localizable: true
+              if:
+                facebook_pixel_toggle: 'equals true'
+      -
+        fields:
+          -
+            handle: google_tag_manager_section
+            field:
+              type: section
+              display: 'Google Tag Manager'
+              localizable: true
+          -
+            handle: google_tag_manager_toggle
+            field:
+              type: toggle
+              instructions: 'Add Plausible tracking code to your head.'
+              listable: false
+              display: 'Google Tag Manager'
+              width: 50
+              localizable: true
+          -
+            handle: google_tag_manager_id
+            field:
+              width: 50
+              display: 'Tracking ID'
+              type: text
+              instructions_position: below
+              validate:
+                - 'required_if:tracker_type,gtag'
+              localizable: true
+              if:
+                google_tag_manager_toggle: 'equals true'
+      -
+        fields:
+          -
+            handle: google_analytics_section
+            field:
+              type: section
+              display: 'Google Analytics'
+              localizable: true
+          -
+            handle: google_analytics_toggle
+            field:
+              type: toggle
+              instructions: 'Add Plausible tracking code to your head.'
+              listable: false
+              display: 'Google Analytics'
+              width: 50
+              localizable: true
+          -
+            handle: google_analytics_id
+            field:
+              width: 50
+              display: 'Tracking ID'
+              type: text
+              instructions_position: below
+              validate:
+                - 'required_if:tracker_type,gtag'
+              localizable: true
+              if:
+                google_analytics_toggle: 'equals true'

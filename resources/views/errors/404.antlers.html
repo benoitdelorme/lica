@@ -1,0 +1,16 @@
+
+{{# Manage redirection #}}
+  {{ redirects:redirects | where('url_old', {current_uri}) }}
+    {{ if internal_url }}
+      {{ redirect :to="internal_url:url" response="{response}" }}
+    {{ elseif external_url }}
+      {{ redirect :to="external_url" response="{response}" }}
+    {{ /if }}
+  {{ /redirects:redirects }}
+{{# Manage redirection #}}
+
+<div class="c-quatre-cent-quatre">
+  <div class="o-container">
+    <p class="c-heading -h2">{{ trans:strings.page_not_found }}</p>
+  </div>
+</div>

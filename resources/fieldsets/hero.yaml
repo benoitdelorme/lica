@@ -1,0 +1,12 @@
+title: Hero
+fields:
+  -
+    handle: hero_section
+    field:
+      type: section
+      display: Hero
+  -
+    handle: text
+    field:
+      type: text
+      display: Text

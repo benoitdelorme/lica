@@ -1,0 +1,24 @@
+title: Blocks
+fields:
+  -
+    handle: blocks_section
+    field:
+      type: section
+      display: 'Page Builder'
+      instructions: 'Add blocks using the + button.'
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      hide_display: true
+      sets:
+        blocks:
+          display: ''
+          sets:
+            hero:
+              display: Hero
+              icon: align-object-top
+              fields:
+                -
+                  import: hero

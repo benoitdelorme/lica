@@ -1,0 +1,9 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-hero {
+  margin-top: 300px;
+  @include responsive-scale("--font-size-h1-m1", 20px, 90px);
+
+  font-size: var(--font-size-h1-m1);
+}

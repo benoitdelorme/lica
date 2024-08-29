@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "build-watch": "vite build -w",
+        "pletil": "node pletil.js"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^6.0.0",
+        "autoprefixer": "^10.4.19",
+        "cssnano": "^7.0.4",
+        "laravel-vite-plugin": "^1.0.5",
+        "postcss": "^8.4.38",
+        "sass": "1.77.6",
+        "vite": "^5.3.5",
+        "stats.js": "^0.17.0",
+        "ejs": "^3.1.10",
+        "fs-extra": "^11.2.0",
+        "yaml": "^2.5.0"
+    },
+    "dependencies": {
+        "@darkroom.engineering/tempus": "^0.0.46",
+        "@vitejs/plugin-vue2": "^2.3.1",
+        "gsap": "^3.12.5",
+        "lenis": "^1.1.6",
+        "split-type": "^0.3.4",
+        "swup": "^4.7.0",
+        "vanilla-cookieconsent": "^3.0.1"
+    }
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /cp/
+Disallow: /vendor/
+Disallow: /storage/
+Disallow: /node_modules/
+Disallow: /site/
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /themes/
+
+# Sitemap location
+Sitemap: https://blsf.ca/sitemap.xml

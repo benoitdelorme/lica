@@ -1,0 +1,23 @@
+@use "sass:math";
+@use "@!/settings/config.colors" as *;
+
+// ==========================================================================
+// Settings / Config / CSS VARS
+// ==========================================================================
+
+// Spacing Units
+// =============================================================================
+$vw-viewport-mobile: 390px;
+$vw-viewport-desktop: 1440px;
+
+$unit:        45px;
+$unit-small:  10px;
+
+// Base
+$font-size:     16px;
+$line-height:   math.div(24px, $font-size);
+$font-color:    color(lightest);
+
+// Grid
+// ==========================================================================
+$base-column-nb: 12;

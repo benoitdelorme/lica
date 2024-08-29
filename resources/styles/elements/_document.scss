@@ -1,0 +1,43 @@
+// ==========================================================================
+// Elements / Document
+// ==========================================================================
+@use "@!/settings/config.fonts" as *;
+@use "@!/settings/config" as *;
+@use "@!/settings/config.colors" as *;
+
+//
+// Simple page-level setup.
+//
+// 1. Includes fonts
+// 2. Ensure the page always fills at least the entire height of the viewport.
+// 3. Set the default `font-size` and `line-height` for the entire project,
+
+@include font-faces($font-faces, $font-dir); // [1]
+
+html {
+  min-height: 100%; // [2]
+  line-height: $line-height; // [3]
+  font-size: $font-size;
+  font-family: ff("sans");
+  color: $font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.is-loading {
+      cursor: wait;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+::selection {
+  background-color: $color-selection-background;
+  color: $color-selection-text;
+  text-shadow: none;
+}
+
+[data-split] {
+  font-kerning: none;
+}

@@ -1,0 +1,109 @@
+{{#
+	@name SEO
+	@desc The SEO partial rendered in the <head> of your page.
+#}}
+
+<title>
+  {{ if seo_title }}
+      {{ seo_title }}
+  {{ else }}
+      {{ yield:seo_title }}
+      {{ title }}
+      {{ seo:title_separator ? seo:title_separator : " &#124; " }}
+      {{ seo:change_page_title | where('collection', {collection}) }}
+          {{ if what_to_add == 'collection_title' }}
+              {{ collection:title }}
+          {{ elseif what_to_add == 'custom_text' }}
+              {{ custom_text }}
+          {{ /if }}
+          {{ seo:title_separator ? seo:title_separator : " &#124; " }}
+      {{ /seo:change_page_title }}
+      {{ seo:site_name ? seo:site_name : config:app:name }}
+  {{ /if }}
+</title>
+
+{{# Page description #}}
+
+{{ if basic_description }}
+  <meta name="description" content="{{ basic_description | strip_tags | entities | trim }}">
+{{ else }}
+  <meta name="description" content="{{ seo:seo_description }}">
+{{ /if }}
+
+
+{{# No index and no follow #}}
+{{ if
+  (environment == 'local' && seo:noindex_local) or
+  (environment == 'staging' && seo:noindex_staging) or
+  (environment == 'production' && seo:noindex_production)
+}}
+    <meta name="robots" content="noindex, nofollow">
+{{ /if }}
+
+{{# Open Graph #}}
+<meta property="og:site_name" content="{{ seo:site_name ? seo:site_name : config:app:name }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{ site:locale }}">
+
+{{ if og_title }}
+  <meta property="og:title" content="{{ og_title | strip_tags | entities | trim }}">
+{{ else }}
+  <meta property="og:title" content="{{ seo_title ? (seo_title | strip_tags | entities | trim) : (title | strip_tags | entities | trim) }}">
+{{ /if }}
+
+{{ if og_description }}
+  <meta property="og:description" content="{{ og_description | strip_tags | entities | trim }}">
+  {{ elseif basic_description }}
+      <meta property="og:description" content="{{ basic_description }}">
+  {{ elseif seo:seo_description }}
+      <meta property="og:description" content="{{ seo:seo_description | strip_tags | entities | trim }}">
+{{ /if }}
+
+{{ if og_image }}
+  <meta property="og:image" content="{{og_image.0.url}}">
+{{ elseif seo:og_image }}
+  <meta property="og:image" content="{{seo:og_image.url}}">
+{{ /if }}
+
+{{# Twitter #}}
+  {{ if twitter_type }}
+    <meta name="twitter:card" content="{{twitter_type}}">
+    {{ else }}
+      <meta name="twitter:card" content="summary">
+  {{ /if }}
+  
+  {{ if seo:twitter_handle }}
+    <meta name="twitter:site" content="{{ seo:twitter_handle }}">
+  {{ /if }}
+
+  {{ if twitter_title }}
+      <meta name="twitter:title" content="{{ twitter_title | strip_tags | entities | trim }}">
+    {{ elseif og_title }}
+      <meta name="twitter:title" content="{{ og_title | strip_tags | entities | trim }}">
+    {{ else }}
+      <meta name="twitter:title" content="{{ seo_title ? (seo_title | strip_tags | entities | trim) : (title | strip_tags | entities | trim) }}">
+  {{ /if }}
+
+  {{ if twitter_description }}
+        <meta name="twitter:description" content="{{ twitter_description | strip_tags | entities | trim }}">
+  {{ elseif og_description }}
+        <meta name="twitter:description" content="{{ og_description | strip_tags | entities | trim }}">
+  {{ elseif seo:seo_description }}
+        <meta name="twitter:description" content="{{ seo:seo_description | strip_tags | entities | trim }}">
+  {{ /if }}
+
+{{ if twitter_image }}
+    <meta name="twitter:image" content="{{ glide:twitter_image width='1200' height='600' fit='crop_focal' absolute="true" }}">
+    {{ asset :url="twitter_image" }}
+        {{ if alt }}
+            <meta name="twitter:image:alt" content="{{ alt ensure_right='.' }}">
+        {{ /if }}
+    {{ /asset }}
+{{ elseif seo:twitter_image }}
+      <meta name="twitter:image" content="{{ glide:seo:twitter_image width='1200' height='600' fit='crop_focal' absolute="true" }}">
+      {{ asset :url="seo:twitter_image" }}
+          {{ if alt }}
+              <meta name="twitter:image:alt" content="{{ alt ensure_right='.' }}">
+          {{ /if }}
+      {{ /asset }}
+{{ /if }}

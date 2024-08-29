@@ -1,0 +1,8 @@
+{{# Blocks Looooooop #}}
+{{ if blocks }}
+  {{ blocks }}
+    {{ partial:if_exists src="components/{type}" }}
+  {{ /blocks }}
+  {{ else }}
+    <div>no blocks or antlers component found.</div>
+{{ /if }}

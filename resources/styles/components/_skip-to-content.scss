@@ -1,0 +1,30 @@
+.c-skip-to-content {
+  position: fixed;
+  z-index: 50;
+  padding-left: 1rem; 
+  padding-right: 1rem;
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem; 
+  font-weight: bold; 
+  color: var(--color-background);
+  transform: translateY(-6rem);  
+  opacity: 0; 
+  top: 1rem; 
+  left: 2rem;
+  background-color: var(--color-accent); 
+
+  &:focus-visible {
+    transform: translateY(0);  
+    opacity: 1;  
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-background);  
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.2s;
+  }
+}

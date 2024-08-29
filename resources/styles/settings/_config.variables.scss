@@ -1,0 +1,40 @@
+@use "@!/settings/config.colors" as *;
+@use "@!/settings/config" as *;
+@use "@!/settings/config.breakpoints" as *;
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+:root {
+  // Grid
+  --grid-columns: 6;
+  @include responsive-scale(--grid-gutter, 10px, 45px);
+  @include responsive-scale(--grid-margin, 10px, 45px);
+  
+  // Font size
+  @include responsive-scale(--font-size-h1, 54px, 130px);
+  @include responsive-scale(--font-size-h2, 45px, 90px);
+  @include responsive-scale(--font-size-h3, 32px, 60px);
+  @include responsive-scale(--font-size-h4, 28px, 50px);
+  @include responsive-scale(--font-size-body, 17px, 19px);
+  @include responsive-scale(--font-size-button, 14px);
+
+  // Line height
+  @include responsive-scale(--line-height-h1, 54.7px, 131.5px);
+  @include responsive-scale(--line-height-h2, 50px, 95px);
+  @include responsive-scale(--line-height-h3, 38px, 65px);
+  @include responsive-scale(--line-height-h4, 34px, 60px);
+  @include responsive-scale(--line-height-body, 23.3px, 26px);
+  @include responsive-scale(--line-height-button, 17px);
+  
+  @media (min-width: $from-sm) {
+    --grid-columns: #{$base-column-nb};
+  }
+
+  &[data-theme="dark"] {
+    --color-primary:    #{color(primary)};
+    --color-accent:     #{color(accent)};
+    --color-text:       #{color(lightest)};
+    --color-background: #{color(darkest)};
+    --color-grey:       #{color(grey)};
+  }
+}

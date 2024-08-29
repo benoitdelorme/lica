@@ -1,0 +1,109 @@
+@use "sass:math";
+@use "@!/settings/config" as *;
+@use "@!/tools/maths" as *;
+
+// ==========================================================================
+// Tools / Functions
+// ==========================================================================
+
+// Returns clamp of calculated preferred responsive value 
+// based on mockups viewport mobile and desktop
+//
+// ```scss
+// .c-heading.-h1 {
+//   font-size: view-clamp(30px, 60px);
+// }
+// .c-box {
+//   height: view-clamp(30px, 60px);
+// }
+// ```
+//
+// @param  {Number} $min-size - min value in PXs
+// @param  {Number} $max-size - max value in PXs
+// @return {Number} clamped value between max and min depending on mockup sizes
+//
+// source: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+
+@function view-clamp(
+	$min-size, 
+	$max-size: $min-size, 
+	$min-width: $vw-viewport-mobile, 
+	$max-width: $vw-viewport-desktop) {
+		
+		$min-size: math.div($min-size, $font-size);
+		$max-size: math.div($max-size, $font-size);
+		$max-width: math.div($max-width, $font-size);
+		$min-width: math.div($min-width, $font-size);
+		
+		$slope: math.div(($max-size - $min-size), ($max-width - $min-width));
+		$y-axis-intersection: -$min-width * $slope + $min-size;
+		
+		$min-size: calc( #{strip-unit($min-size)} * 1rem );
+		$max-size: calc( #{strip-unit($max-size)} * 1rem );
+
+		@return clamp(
+				#{$min-size},
+				#{$y-axis-intersection * 1rem} + #{$slope * 100vw},
+				#{$max-size}
+		);
+}
+
+// Converts the given pixel value to its REM quivalent.
+//
+// @param  {Number} $size - The pixel value to convert.
+// @param  {Number} $base [$font-size] - The assumed base font size.
+// @return {Number} Scalable pixel value in REMs.
+
+@function rem($size, $base: $font-size) {
+	@return math.div($size, $base) * 1rem;
+}
+
+// Returns calculation of a percentage of the viewport width.
+//
+// ```scss
+// .c-box {
+//     width: vw(100);
+// }
+// ```
+//
+// @param  {number} $number - The percentage number
+// @return {function<number>} in vw
+
+@function vw($number) {
+	@return calc(#{$number} * var(--vw, 1vw));
+}
+
+// Returns clamp of calculated preferred responsive value
+// within a font size and breakpoint range.
+//
+// ```scss
+// .c-heading.-h1 {
+//     font-size: responsive-value(30px, 60px, 1800);
+// }
+//
+// ```
+//
+// @param  {number} $min-size   - Minimum font size in pixels.
+// @param  {number} $max-size   - Maximum font size in pixels.
+// @param  {number} $breakpoint - Maximum breakpoint.
+// @return {function<number, function<number>, number>}
+@function responsive-value($min-size, $max-size, $breakpoint: $vw-viewport) {
+	$delta: math.div($max-size, $breakpoint);
+	@return clamp($min-size, calc(#{strip-unit($delta)} * #{vw(100)}), $max-size);
+}
+
+
+// Resolve whether a rule is important or not.
+//
+// @param  {Boolean}     $flag - Whether a rule is important (TRUE) or not (FALSE).
+// @return {String|Null} Returns `!important` or NULL.
+
+@function important($flag: false) {
+	@if ($flag == true) {
+			@return !important;
+	} @else if ($important == false) {
+			@return null;
+	} @else {
+			@error "`#{$flag}` needs to be `true` or `false`.";
+	}
+}

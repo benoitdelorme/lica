@@ -1,0 +1,389 @@
+tabs:
+  informations:
+    display: Informations
+    sections:
+      -
+        fields:
+          -
+            handle: phone_section
+            field:
+              type: section
+              display: Phone
+              instructions: 'Phone configuration options.'
+              localizable: true
+          -
+            handle: phone_number_1
+            field:
+              type: text
+              display: 'Phone Number 1'
+              localizable: true
+              instructions: 'Format : 418.624.6680'
+              width: 50
+          -
+            handle: phone_number_2
+            field:
+              type: text
+              display: 'Phone Number 2'
+              localizable: true
+              instructions: 'Format : 1.888.624.6680'
+              width: 50
+          -
+            handle: email_section
+            field:
+              type: section
+              display: Email
+              localizable: false
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              localizable: false
+          -
+            handle: address_section
+            field:
+              type: section
+              display: Address
+              instructions: 'Address configuration options.'
+              localizable: true
+          -
+            handle: address_full
+            field:
+              type: textarea
+              display: Address
+              localizable: true
+              width: 50
+          -
+            handle: google_map_link
+            field:
+              type: link
+              display: 'Google Map Link'
+              localizable: true
+              width: 50
+          -
+            handle: fax_number_section
+            field:
+              type: section
+              display: 'Fax Number'
+              localizable: true
+          -
+            handle: fax_number
+            field:
+              type: text
+              display: 'Fax Number'
+              localizable: true
+          -
+            handle: section_social
+            field:
+              type: section
+              display: 'Social media links'
+              localizable: true
+          -
+            handle: social_media
+            field:
+              type: replicator
+              localizable: true
+              display: 'Social media'
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    email:
+                      display: Email
+                      icon: social-mail-send-email-message
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            display: Email
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'mailto:'
+                            localizable: false
+                    facebook:
+                      display: Facebook
+                      icon: social-facebook
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.facebook.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.facebook.com/'
+                            localizable: false
+                    github:
+                      display: GitHub
+                      icon: social-github
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.github.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.github.com/'
+                            localizable: false
+                    instagram:
+                      display: Instagram
+                      icon: social-instagram
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.instagram.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.instagram.com/'
+                            localizable: false
+                    linkedin:
+                      display: LinkedIn
+                      icon: social-linkedin
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.linkedin.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.linkedin.com/'
+                            localizable: false
+                    mastodon:
+                      display: Mastodon
+                      icon: social-mastodon
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            display: URL
+                            validate: required
+                    pinterest:
+                      display: Pinterest
+                      icon: social-pinterest
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.pinterest.com/'
+                            display: URL
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.pinterest.com/'
+                            localizable: false
+                    twitter:
+                      display: X
+                      icon: social-twitter
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.twitter.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.twitter.com/'
+                            localizable: false
+                    vimeo:
+                      display: Vimeo
+                      icon: social-vimeo
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.vimeo.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.vimeo.com/'
+                            localizable: false
+                    youtube:
+                      display: YouTube
+                      icon: social-youtube
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.youtube.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.youtube.com/'
+                            localizable: false
+  prefooter:
+    display: Prefooter
+    sections:
+      -
+        fields:
+          -
+            handle: prefooter_section
+            field:
+              type: section
+              display: Prefooter
+              localizable: false
+          -
+            handle: prefooter_title
+            field:
+              type: text
+              display: Title
+              localizable: false
+          -
+            handle: prefooter_items
+            field:
+              type: grid
+              display: Items
+              localizable: false
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text
+                    localizable: false
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    localizable: false
+          -
+            handle: prefooter_anchor
+            field: common.anchor
+  copyright_tab:
+    display: Copyright
+    sections:
+      -
+        fields:
+          -
+            handle: section_copyright
+            field:
+              type: section
+              display: Copyright
+              instructions: 'Copyright configuration options.'
+              localizable: true
+          -
+            handle: copyright_since
+            field:
+              placeholder: '2024'
+              input_type: number
+              character_limit: 4
+              prepend: ©
+              default: '2024'
+              display: 'Copyright since'
+              instructions: 'The website will add ` - current_year ` if they differ.'
+              type: text
+              width: 50
+              validate:
+                - required
+              localizable: false
+          -
+            handle: copyright_name
+            field:
+              display: 'Copyright name'
+              type: text
+              instructions: 'Falls back to the applicaton name.'
+              width: 50
+              localizable: true
+  privacy_tab:
+    display: Privacy
+    sections:
+      -
+        fields:
+          -
+            handle: section_privacy
+            field:
+              type: section
+              display: 'Privacy statement'
+              instructions: 'Configure an optional privacy statement.'
+              localizable: true
+          -
+            handle: privacy_statement_type
+            field:
+              options:
+                none: None
+                entry: Entry
+                pdf: PDF
+              default: none
+              type: button_group
+              instructions: 'This will be used in form consent and in the optional cookie banner.'
+              instructions_position: below
+              listable: false
+              localizable: true
+              display: 'Privacy statement'
+              width: 50
+          -
+            handle: privacy_statement_asset
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              localizable: true
+              display: 'Privacy statement (PDF)'
+              width: 50
+              always_save: false
+              if:
+                privacy_statement_type: 'equals pdf'
+              validate:
+                - 'required_if:privacy_statement_type,pdf'
+          -
+            handle: privacy_statement_entry
+            field:
+              max_items: 1
+              type: entries
+              localizable: true
+              display: 'Privacy statement (entry)'
+              width: 50
+              if:
+                privacy_statement_type: 'equals entry'
+              validate:
+                - 'required_if:privacy_statement_type,entry'

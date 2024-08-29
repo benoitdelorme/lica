@@ -1,0 +1,86 @@
+title: Metatags
+fields:
+  -
+    handle: basic_description
+    field:
+      display: Description
+      instructions: "A brief and concise summary of the page's content, preferably 150 characters or less. Where as the description meta tag may be used by search engines to display a snippet about the page in search results."
+      type: textarea
+      localizable: true
+  -
+    handle: og
+    field:
+      display: 'Open Graph'
+      type: section
+      localizable: true
+  -
+    handle: og_image
+    field:
+      display: Image
+      instructions: 'The URL of an image which should represent the content. The image must be at least 200 x 200 pixels in size; 600 x 316 pixels is a recommended minimum size, and for best results use an image least 1200 x 630 pixels in size. Supports PNG, JPEG and GIF formats.'
+      container: assets
+      type: assets
+      localizable: true
+  -
+    handle: og_title
+    field:
+      display: 'Content title'
+      instructions: 'The title of the content, e.g., <em>The Rock</em>.'
+      type: text
+      localizable: true
+  -
+    handle: og_description
+    field:
+      display: 'Content description'
+      instructions: 'A one to two sentence description of the content.'
+      type: textarea
+      localizable: true
+  -
+    handle: twitter
+    field:
+      display: 'X (Twitter)'
+      type: section
+      localizable: true
+  -
+    handle: twitter_type
+    field:
+      display: 'Card type'
+      instructions: 'The card type.'
+      width: 50
+      options:
+        summary: Summary
+        summary_large_image: 'Summary with large image'
+        app: App
+        player: Player
+      clearable: true
+      type: select
+      localizable: true
+  -
+    handle: twitter_title
+    field:
+      display: 'Content title'
+      instructions: 'Title of content (max 70 characters).'
+      type: text
+      if:
+        twitter_type: 'not app'
+      localizable: true
+  -
+    handle: twitter_description
+    field:
+      display: 'Content description'
+      instructions: 'Description of content (maximum 200 characters).'
+      type: textarea
+      if:
+        twitter_type: 'not app'
+      localizable: true
+  -
+    handle: twitter_image
+    field:
+      display: Image
+      instructions: 'URL of image to use in the card. Images must be less than 5MB in size. <code>JPG</code>, <code>PNG</code>, <code>WEBP</code> and <code>GIF</code> formats are supported. Only the first frame of an animated GIF will be used. <strong><code>SVG</code> is not supported</strong>.'
+      container: assets
+      type: assets
+      max_files: 1
+      if:
+        twitter_type: 'not app'
+      localizable: true
