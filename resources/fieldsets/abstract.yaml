@@ -1,0 +1,27 @@
+title: Abstract
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: Abstract
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+  -
+    handle: button
+    field: common.button
+  -
+    handle: anchor
+    field: common.anchor

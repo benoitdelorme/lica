@@ -1,0 +1,30 @@
+title: 'Text Media Overlay'
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: 'Text Media Overlay'
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: text
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+      buttons:
+        - bold
+        - italic
+  -
+    handle: button
+    field: common.button
+  -
+    handle: media
+    field:
+      container: assets
+      type: assets
+      display: Media

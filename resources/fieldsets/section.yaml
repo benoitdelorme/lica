@@ -1,0 +1,24 @@
+title: Section
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      localizable: true
+  -
+    handle: text
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - anchor
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+      localizable: true

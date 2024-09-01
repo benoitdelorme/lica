@@ -32,13 +32,11 @@ tabs:
             field:
               type: section
               display: Email
-              localizable: false
           -
             handle: email
             field:
               type: text
               display: Email
-              localizable: false
           -
             handle: address_section
             field:
@@ -270,32 +268,25 @@ tabs:
             field:
               type: section
               display: Prefooter
-              localizable: false
           -
             handle: prefooter_title
             field:
               type: text
               display: Title
-              localizable: false
           -
             handle: prefooter_items
             field:
               type: grid
               display: Items
-              localizable: false
               fields:
                 -
                   handle: text
                   field:
                     type: text
                     display: Text
-                    localizable: false
                 -
-                  handle: link
-                  field:
-                    type: link
-                    display: Link
-                    localizable: false
+                  handle: button
+                  field: common.button
           -
             handle: prefooter_anchor
             field: common.anchor
@@ -325,7 +316,6 @@ tabs:
               width: 50
               validate:
                 - required
-              localizable: false
           -
             handle: copyright_name
             field:

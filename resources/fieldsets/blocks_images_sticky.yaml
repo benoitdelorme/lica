@@ -1,0 +1,148 @@
+title: 'Blocks / Images Sticky'
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: 'Blocks / Images Sticky'
+  -
+    handle: preview
+    field:
+      type: layout_preview
+      display: Preview
+      hide_display: true
+  -
+    handle: images
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: Images
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      sets:
+        new_set_group:
+          display: Blocks
+          sets:
+            abstract:
+              display: Abstract
+              icon: mail-chat-bubble-text
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Text
+                -
+                  handle: anchor
+                  field: common.anchor
+            text_media:
+              display: 'Text Media'
+              icon: text-formatting-image-bottom
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Text
+                -
+                  handle: media
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Media
+                -
+                  handle: anchor
+                  field: common.anchor
+            accordions:
+              display: Accordions
+              icon: arrows-fit-to-height
+              fields:
+                -
+                  handle: section_title
+                  field:
+                    type: text
+                    display: 'Section Title'
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: accordions
+                  field:
+                    type: grid
+                    display: Accordions
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: text
+                        field:
+                          buttons:
+                            - bold
+                            - italic
+                          remove_empty_nodes: false
+                          type: bard
+                          display: Text
+                -
+                  handle: anchor
+                  field: common.anchor
+            infos_list:
+              display: 'Infos List'
+              icon: file-content-list
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: items
+                  field:
+                    type: grid
+                    display: Items
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: text
+                        field:
+                          type: text
+                          display: Text
+                      -
+                        handle: link
+                        field:
+                          type: link
+                          display: Link
+                -
+                  handle: anchor
+                  field: common.anchor

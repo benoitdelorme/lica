@@ -6,7 +6,53 @@ fields:
       type: section
       display: Hero
   -
-    handle: text
+    handle: background_color
     field:
-      type: text
-      display: Text
+      swatches:
+        - '#C7E3F5'
+        - '#325647'
+        - '#2F473D'
+        - '#00AA78'
+        - '#3C3D3D'
+        - '#E5E2DF'
+        - '#F7F4F3'
+      allow_any: false
+      type: color
+      display: 'Background Color'
+  -
+    handle: content
+    field:
+      fullscreen: false
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      buttons:
+        - alignleft
+        - aligncenter
+        - alignright
+      sets:
+        image:
+          display: 'Image Effect'
+          icon: media-image-picture-orientation
+          sets:
+            image:
+              display: Content
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text
+                    width: 50
+                -
+                  handle: assets_field
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Assets Field'
+                    width: 50
+  -
+    handle: anchor
+    field: common.anchor

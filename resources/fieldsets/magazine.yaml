@@ -1,0 +1,37 @@
+title: Magazine
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: Magazine
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+  -
+    handle: images
+    field:
+      max_files: 2
+      min_files: 2
+      container: assets
+      type: assets
+      display: Images
+  -
+    handle: anchor
+    field: common.anchor

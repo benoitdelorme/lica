@@ -12,13 +12,57 @@ fields:
       type: replicator
       display: Blocks
       hide_display: true
+      collapse: true
+      fullscreen: false
       sets:
         blocks:
-          display: ''
+          display: null
           sets:
-            hero:
-              display: Hero
-              icon: align-object-top
+            blocks_images_sticky:
+              display: 'Blocks / Images Sticky'
+              icon: text-formatting-wrap-image-margin-right
               fields:
                 -
-                  import: hero
+                  import: blocks_images_sticky
+            horizontal_section:
+              display: 'Horizontal Section'
+              icon: align-object-center
+              fields:
+                -
+                  import: horizontal_section
+            text_media_overlay:
+              display: 'Text Media Overlay'
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  import: text_media_overlay
+            media:
+              display: Media
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: media
+            profil_listing:
+              display: 'Profil Listing'
+              icon: user-multiple
+              fields:
+                -
+                  import: profil_listing
+            abstract:
+              display: Abstract
+              icon: presentation-board
+              fields:
+                -
+                  import: abstract
+            media_grid:
+              display: 'Media Grid'
+              icon: layout-three-columns
+              fields:
+                -
+                  import: medias_grid
+            sections:
+              display: Sections
+              icon: layout-two-columns
+              fields:
+                -
+                  import: sections

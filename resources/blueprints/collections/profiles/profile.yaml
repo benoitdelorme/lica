@@ -1,0 +1,58 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: full_name
+            field:
+              type: text
+              display: 'Full Name'
+          -
+            handle: position
+            field:
+              type: text
+              display: Position
+          -
+            handle: links
+            field:
+              type: grid
+              display: Links
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: button
+                  field: abstract.button
+                  config:
+                    display: Link
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: photo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Photo
+title: Profile

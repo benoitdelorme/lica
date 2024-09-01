@@ -1,0 +1,17 @@
+title: Media
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: Media
+  -
+    handle: media
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Media
+  -
+    handle: anchor
+    field: common.anchor

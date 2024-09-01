@@ -1,0 +1,48 @@
+title: 'Horizontal Section'
+fields:
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      hide_display: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero:
+              display: Hero
+              icon: favorite-award
+              fields:
+                -
+                  import: hero
+            magazine:
+              display: Magazine
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: magazine
+            media:
+              display: Media
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  import: media
+            content_columns:
+              display: 'Content Columns'
+              icon: layout-two-columns
+              fields:
+                -
+                  import: content_columns
+            accordions:
+              display: Accordions
+              icon: arrows-fit-to-width
+              fields:
+                -
+                  import: accordions
+            date:
+              display: Date
+              icon: calendar-date
+              fields:
+                -
+                  import: date

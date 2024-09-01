@@ -1,0 +1,31 @@
+title: Sections
+fields:
+  -
+    handle: section_sections
+    field:
+      type: section
+      display: Sections
+  -
+    handle: preview
+    field:
+      preview_images: preview/sections.png
+      type: layout_preview
+      display: Preview
+      hide_display: true
+  -
+    handle: sections
+    field:
+      type: replicator
+      display: Sections
+      localizable: true
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            section:
+              display: Section
+              icon: layout-two-columns
+              fields:
+                -
+                  import: section

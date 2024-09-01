@@ -1,0 +1,17 @@
+title: 'Profil Listing'
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: 'Profil Listing'
+  -
+    handle: profils
+    field:
+      collections:
+        - profiles
+      type: entries
+      display: Profils
+  -
+    handle: anchor
+    field: common.anchor

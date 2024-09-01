@@ -1,0 +1,23 @@
+title: 'Medias Grid'
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      display: 'Medias Grid'
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: medias
+    field:
+      max_files: 3
+      min_files: 2
+      container: assets
+      type: assets
+      display: Medias
+  -
+    handle: anchor
+    field: common.anchor
