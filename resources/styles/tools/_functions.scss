@@ -25,7 +25,7 @@
 // source: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
 
 @function view-clamp(
-	$min-size, 
+	$min-size, 	
 	$max-size: $min-size, 
 	$min-width: $vw-viewport-mobile, 
 	$max-width: $vw-viewport-desktop) {

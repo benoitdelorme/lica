@@ -1,0 +1,113 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-blocks-image-sticky_accordions {
+  position: relative;
+  z-index: -1;
+
+  &_top {
+    position: relative;
+    z-index: 10;
+  }
+  
+  &_title {
+    margin-top: view-clamp(11px);
+  }
+
+  &_accordions {
+    width: calc(100% + var(--grid-margin) + var(--grid-gutter));
+    margin-left: calc(var(--grid-margin) * -1);
+    margin-top: view-clamp(70px);
+  }
+
+  &_accordion {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    &:nth-of-type(3n-2) {
+      --content-color: var(--color-charcoal);
+      background-color: var(--color-sky);
+      z-index: 7;
+      top: rem(100px);
+
+      .c-blocks-image-sticky_accordions_header {
+        background-color: var(--color-sky);
+
+        &:before {
+          background-color: var(--color-sand);
+        }
+      }
+    }
+
+    &:nth-of-type(3n-1) {
+      --content-color: var(--color-bottle-m1);
+      background-color: var(--color-mint);
+      z-index: 8;
+      top: rem(192px);
+
+      .c-blocks-image-sticky_accordions_header {
+        background-color: var(--color-mint);
+
+        &:before {
+          background-color: var(--color-mint);
+        }
+      }
+    }
+
+    &:nth-of-type(3n) {
+      position: relative;
+      --content-color: var(--color-mint);
+      background-color: var(--color-bottle-m2);
+      z-index: 9;
+      top: rem(0px);
+      padding-bottom: 60px;
+
+      .c-blocks-image-sticky_accordions_header {
+        background-color: var(--color-bottle-m2);
+
+        &:before {
+          background-color: var(--color-bottle-m2);
+        }
+      }
+    }
+  }
+
+  &_header {
+    position: sticky;
+    padding-top: view-clamp(28px);
+    padding-bottom: view-clamp(20px);
+    padding-inline: var(--grid-margin);
+    z-index: 2;
+
+    &:before {
+      /* content: ""; */
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      height: rem(100px);
+      width: 100%;
+    }
+    
+  }
+
+  &_content {
+    position: relative;
+    margin-top: view-clamp(38px);
+    padding-bottom: view-clamp(135px);
+    padding-inline: var(--grid-margin);
+    z-index: 1;
+  }
+
+  &_separator {
+    height: rem(1px);
+    background-color: var(--content-color);
+    width: calc(100% - 2 * var(--grid-margin));
+    padding-inline: var(--grid-margin);
+    margin-left: var(--grid-margin);
+  }
+
+  &_content, &_index {
+    color: var(--content-color);
+  }
+}

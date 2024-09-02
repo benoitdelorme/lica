@@ -1,3 +1,30 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
 .c-button {
-  
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: view-clamp(10px);
+
+  &.-arrow {
+    padding-bottom: view-clamp(7px);
+    text-transform: uppercase;
+    
+    &:after {
+      content: url('data:image/svg+xml,<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8805 0.0452775C11.1835 0.0452718 11.4291 0.290876 11.4291 0.593846L11.4291 1.42477C11.4291 4.15769 13.6263 6.37786 16.3513 6.41396C16.3737 6.41369 16.3963 6.41358 16.4188 6.41358C16.7217 6.41359 16.9673 6.65915 16.9673 6.96213C16.9674 6.97 16.9672 6.97777 16.9669 6.98553C16.955 7.27799 16.7141 7.51151 16.4187 7.51152C16.3962 7.51151 16.3738 7.51143 16.3513 7.51116C13.6263 7.54726 11.4292 9.76746 11.4292 12.5003L11.4292 13.3305C11.4292 13.6334 11.1835 13.879 10.8806 13.879C10.5776 13.879 10.332 13.6334 10.332 13.3304V12.5003C10.332 10.4834 11.313 8.69542 12.8241 7.58782L0.775578 7.58786C0.472659 7.58781 0.227055 7.34221 0.227004 7.03929C0.227009 6.73631 0.472631 6.49069 0.775607 6.49068L13.0433 6.49067C11.4085 5.39927 10.332 3.53764 10.332 1.42478L10.332 0.593846C10.332 0.290882 10.5776 0.0452775 10.8805 0.0452775Z" fill="%233C3D3D"/></svg>');
+      display: inline-block;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: rem(1px);
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-charcoal);
+    }
+  }
 }

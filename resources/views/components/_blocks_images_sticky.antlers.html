@@ -1,14 +1,14 @@
 <div data-component="BlocksImagesSticky" class="c-blocks-images-sticky">
   <div class="o-grid -cols -gutters o-container">
-    <div class="c-blocks-images-sticky_blocks || o-grid_item || u-gc-1/9@from-lg">
+    <div class="c-blocks-images-sticky_blocks || o-grid_item || u-gc-1/9@from-md">
       {{ blocks }}
         {{ partial:if_exists src="components/blocks_image_sticky/{type}" }}
       {{ /blocks }}
     </div>
-    <div class="o-grid_item || u-gc-9/16@from-lg">
+    <div class="o-grid_item || u-gc-9/16@from-md">
       <div class="c-blocks-images-sticky_images">
         {{ images }}
-          <div class="c-blocks-images-sticky_image">
+          <div class="c-blocks-images-sticky_image" style="z-index:{{ 3 -index }};">
             <img class="c-image -cover" src="{{ url }}" alt="{{ alt }}">
           </div>
         {{ /images }}

@@ -7,50 +7,52 @@
 :root {
   // Grid
   --grid-columns: 6;
-  @include responsive-scale(--grid-gutter, 10px, 50px);
-  @include responsive-scale(--grid-margin, 10px, 50px);
+  --grid-gutter: #{view-clamp(10px, 50px)};
+  --grid-margin: #{view-clamp(10px, 50px)};
   
   // Font size
-  @include responsive-scale(--font-size-h1, 60px, 126.96px);
-  @include responsive-scale(--font-size-h2, 40px, 80px);
-  @include responsive-scale(--font-size-h3, 35px, 60px);
-  @include responsive-scale(--font-size-h4, 30px, 50px);
-  @include responsive-scale(--font-size-h5, 19px, 25px);
-  @include responsive-scale(--font-size-body, 19px);
-  @include responsive-scale(--font-size-body-mini, 16px);
-  @include responsive-scale(--font-size-button, 16px);
-  @include responsive-scale(--font-size-mini, 12px);
-  @include responsive-scale(--font-size-epigraph, 90px, 190px);
+  --font-size-h1: #{view-clamp(60px, 126.96px)};
+  --font-size-h2: #{view-clamp(40px, 80px)};
+  --font-size-h3: #{view-clamp(35px, 60px)};
+  --font-size-h4: #{view-clamp(30px, 50px)};
+  --font-size-h5: #{view-clamp(19px, 25px)};
+  --font-size-body: #{view-clamp(19px)};
+  --font-size-body-section: #{view-clamp(16px)};
+  --font-size-body-mini: #{view-clamp(16px)};
+  --font-size-button: #{view-clamp(16px)};
+  --font-size-mini: #{view-clamp(12px)};
+  --font-size-epigraph: #{view-clamp(90px, 190px)};
 
   // Line height
-  @include responsive-scale(--line-height-h1, 60px, 114px);
-  @include responsive-scale(--line-height-h2, 45px, 80px);
-  @include responsive-scale(--line-height-h3, 70px, 70px);
-  @include responsive-scale(--line-height-h4, 35px, 55px);
-  @include responsive-scale(--line-height-h5, 28px, 45px);
-  @include responsive-scale(--line-height-body, 28px);
-  @include responsive-scale(--line-height-body-mini, 22px);
-  @include responsive-scale(--line-height-button, 20px);
-  @include responsive-scale(--line-height-mini, 18px);
-  @include responsive-scale(--line-height-epigraph, 90px,190px);
-
+  --line-height-h1: #{view-clamp(60px, 114px)};
+  --line-height-h2: #{view-clamp(45px, 80px)};
+  --line-height-h3: #{view-clamp(35px, 70px)};
+  --line-height-h4: #{view-clamp(28px, 55px)};
+  --line-height-h5: #{view-clamp(28px, 45px)};
+  --line-height-body: #{view-clamp(28px)};
+  --line-height-body-section: #{view-clamp(20px)};
+  --line-height-body-mini: #{view-clamp(22px, 22px)};
+  --line-height-button: #{view-clamp(20px, 20px)};
+  --line-height-mini: #{view-clamp(18px, 18px)};
+  --line-height-epigraph: #{view-clamp(90px, 190px)};
   
   @media (min-width: $from-sm) {
     --grid-columns: #{$base-column-nb};
   }
 
   &[data-theme="light"] {
-    --color-mint:          #{color(mint)};
-    --color-bottle-m1:     #{color(bottle-m1)};
-    --color-bottle-m2:     #{color(bottle-m2)};
-    --color-sky:           #{color(sky)};
-    --color-pearl:         #{color(pearl)};
-    --color-sand:          #{color(sand)};
-    --color-charcoal:      #{color(charcoal)};
-    --color-lightest:      #{color(lightest)};
-    --color-darkest:       #{color(darkest)};
-    --color-background:    #{color(sand)};
-    --color-text:          #{color(charcoal)};
+    --color-mint:             #{color(mint)};
+    --color-bottle-m1:        #{color(bottle-m1)};
+    --color-bottle-m2:        #{color(bottle-m2)};
+    --color-sky:              #{color(sky)};
+    --color-pearl:            #{color(pearl)};
+    --color-sand:             #{color(sand)};
+    --color-charcoal:         #{color(charcoal)};
+    --color-charcoal-light:   #{color(charcoal, 0.75)};
+    --color-lightest:         #{color(lightest)};
+    --color-darkest:          #{color(darkest)};
+    --color-background:       #{color(sand)};
+    --color-text:             #{color(charcoal)};
   }
 
 }

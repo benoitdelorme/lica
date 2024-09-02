@@ -1,0 +1,37 @@
+tree:
+  -
+    id: e256ce5f-aa95-436a-80af-1712a349beca
+    title: Adresse
+    url: 'https://www.google.com/maps/place/6455+Rue+Jean-Talon+E+Bureau+1004,+Saint-Leonard,+QC+H1S+3E8/data=!4m2!3m1!1s0x4cc91e8af8c622a9:0xcff826007228e6ff?sa=X&ved=1t:242&ictx=111'
+    data:
+      label: "1004-6455 rue Jean-Talon E <br> Saint-Léonard QC\_ H1S 3E8"
+  -
+    id: 97348e25-f206-4f81-9013-f67aa977f5ef
+    title: Téléphone
+    url: 'tel:514 254-4111'
+    data:
+      label: '514 254-4111'
+  -
+    id: 06f2444c-95bc-4956-a5e7-54819ee0aa70
+    title: 'Sans frais'
+    url: 'tel:1 888 254-4111'
+    data:
+      label: '1 888 254-4111'
+  -
+    id: 13e4dad2-cdc5-45c0-897e-54fa314cef04
+    title: Télécopieur
+    url: 'tel:514 254-6537'
+    data:
+      label: '514 254-6537'
+  -
+    id: b287c8a2-d2d1-4d4e-b54c-7e1f9d61f2b0
+    title: Courriel
+    url: 'mailto:info@planificationlica.ca'
+    data:
+      label: info@planificationlica.ca
+  -
+    id: 2e0475ae-116b-4868-b1d3-10b97f06fb39
+    title: Suivez-nous
+    url: 'https://www.linkedin.com/company/planification-lica/?originalSubdomain=ca'
+    data:
+      label: LinkedIn

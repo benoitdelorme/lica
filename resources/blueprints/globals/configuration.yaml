@@ -32,11 +32,13 @@ tabs:
             field:
               type: section
               display: Email
+              localizable: false
           -
             handle: email
             field:
               type: text
               display: Email
+              localizable: false
           -
             handle: address_section
             field:
@@ -258,38 +260,6 @@ tabs:
                             type: hidden
                             default: 'https://www.youtube.com/'
                             localizable: false
-  prefooter:
-    display: Prefooter
-    sections:
-      -
-        fields:
-          -
-            handle: prefooter_section
-            field:
-              type: section
-              display: Prefooter
-          -
-            handle: prefooter_title
-            field:
-              type: text
-              display: Title
-          -
-            handle: prefooter_items
-            field:
-              type: grid
-              display: Items
-              fields:
-                -
-                  handle: text
-                  field:
-                    type: text
-                    display: Text
-                -
-                  handle: button
-                  field: common.button
-          -
-            handle: prefooter_anchor
-            field: common.anchor
   copyright_tab:
     display: Copyright
     sections:
@@ -316,6 +286,7 @@ tabs:
               width: 50
               validate:
                 - required
+              localizable: false
           -
             handle: copyright_name
             field:

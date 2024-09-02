@@ -1,1 +1,22 @@
-.c-abstract {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-abstract {
+  padding-block: view-clamp(250px) view-clamp(75px);
+  background-color: var(--color-sand);
+
+  &_asterisk {
+    font-size: view-clamp(70px);
+    line-height: view-clamp(70px);
+    font-family: "Source Serif 4";
+  }
+
+  &_text {
+    padding-top: view-clamp(46px);
+    color: var(--color-charcoal-light);
+  }
+
+  &_button {
+    padding-top: view-clamp(20px);
+  }
+}

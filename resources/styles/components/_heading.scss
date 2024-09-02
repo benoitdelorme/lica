@@ -2,14 +2,17 @@
   &.-h1 {
     font-size: var(--font-size-h1);
     line-height: var(--line-height-h1);
-    font-family: "Source Serif 4";
     font-weight: 400;
     letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
   }
 
   &.-h2 {
     font-size: var(--font-size-h2);
     line-height: var(--line-height-h2);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
   }
 
   &.-h3 {
@@ -20,6 +23,7 @@
   &.-h4 {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-h4);
+    font-family: "Source Serif 4";
   }
 
   &.-h5 {

@@ -3,7 +3,7 @@ id: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 blueprint: page
 title: Accueil
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725260344
+updated_at: 1725293795
 blocks:
   -
     id: m0jum16n
@@ -26,7 +26,7 @@ blocks:
         enabled: true
       -
         id: m0juniu7
-        title: 'Fermeture des bureau pour les fêtes'
+        title: 'Fermeture des bureau<br> pour les fêtes'
         text:
           -
             type: paragraph
@@ -42,7 +42,7 @@ blocks:
         accordions:
           -
             id: m0juo818
-            title: "Notre approche \L360 degrés"
+            title: 'Notre approche 360 degrés'
             text:
               -
                 type: paragraph
@@ -52,7 +52,7 @@ blocks:
                     text: 'Notre approche à 360 degrés se distingue par une planification minutieuse qui englobe tous les aspects de votre vie. Nous comprenons que votre patrimoine financier est étroitement lié à vos aspirations personnelles, à vos besoins familiaux et à vos objectifs de vie.'
           -
             id: m0jur9dq
-            title: 'Notre offre de services'
+            title: 'Notre offre <br> de services'
             text:
               -
                 type: paragraph
@@ -62,7 +62,7 @@ blocks:
                     text: "Pour l'épargne, découvrez nos placements adaptés aux pré-retraités, retraités, familles et particuliers. Du côté des assurances, nous offrons une gamme complète, incluant la vie, l'invalidité, les maladies graves, les prêts hypothécaires, les soins de longue durée, et bien plus encore. Planifiez votre avenir financier avec confiance grâce à Planification Lica."
           -
             id: m0jurkka
-            title: 'Profil de clientèles'
+            title: 'Profil de <br> clientèles'
             text:
               -
                 type: paragraph
@@ -73,12 +73,12 @@ blocks:
         type: accordions
         enabled: true
         section_title: "L'excellence dans la planification financière"
-        title: "Votre avenir financier, \Lnotre expertise"
+        title: 'Votre avenir financier, notre expertise'
     type: blocks_images_sticky
     enabled: true
   -
     id: m0jusieu
-    title: "Bâtissez vos rêves financiers \Lgrâce au 30 ans d'expertise \Lde Planification Lica"
+    title: "Bâtissez vos rêves financiers \Lgrâce au 30 ans d'expertise de Planification Lica"
     text:
       -
         type: paragraph

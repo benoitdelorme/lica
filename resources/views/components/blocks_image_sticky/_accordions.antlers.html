@@ -1,3 +1,32 @@
 <div class="c-blocks-image-sticky_accordions">
-  
+  <div class="c-blocks-image-sticky_accordions_top">
+    <div class="c-blocks-image-sticky_accordions_section-title || c-text -body-section">
+      {{ section_title }}
+    </div>
+    
+    <div class="c-blocks-image-sticky_accordions_title || c-heading -h2">
+      {{ title }}
+    </div>
+  </div>
+
+  <div class="c-blocks-image-sticky_accordions_accordions">
+    {{ accordions }}
+      <div class="c-blocks-image-sticky_accordions_accordion">
+        <div class="c-blocks-image-sticky_accordions_header">
+          <div class="c-blocks-image-sticky_accordions_index || c-heading -h5">
+            {{ if ((index + 1) < 10) }}0{{ /if }}{{ index + 1 }}.
+          </div>
+        </div>
+        <div class="c-blocks-image-sticky_accordions_separator"></div>
+        <div class="c-blocks-image-sticky_accordions_content || o-grid -col-8 -gutters-x">
+          <div class="o-grid_item || u-gc-1/5@from-md || c-heading -h4">
+            {{ title }}
+          </div>
+          <div class="o-grid_item || u-gc-5/9@from-md">
+            {{ text }}
+          </div>
+        </div>
+      </div>
+    {{ /accordions }}
+  </div>
 </div>

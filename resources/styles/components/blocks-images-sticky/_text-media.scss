@@ -1,0 +1,20 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-blocks-image-sticky_text-media {
+  padding-block: view-clamp(72px) view-clamp(75px);
+
+  &_title {
+    text-transform: uppercase;
+  }
+
+  &_text {
+    color: var(--color-charcoal-light);
+  }
+  
+
+  &_image {
+    margin-top: view-clamp(60px);
+    aspect-ratio: 691/438;
+  }
+}

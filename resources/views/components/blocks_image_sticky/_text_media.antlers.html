@@ -1,3 +1,14 @@
 <div class="c-blocks-image-sticky_text-media">
-  
+  <div class="c-blocks-image-sticky_text-media_content || o-grid -col-8 -gutters-x">
+    <p class="c-blocks-image-sticky_text-media_title || o-grid_item u-gc-1/4 || c-text -body-section">
+      {{ title }}
+    </p>
+    <div class="c-blocks-image-sticky_text-media_text || o-grid_item u-gc-4/9 || c-text -body">{{ text }}</div>
+
+    <div class="c-blocks-image-sticky_text-media_image || o-grid_item u-gc-1/9">
+      {{ media }}
+        <img class="c-image -cover" src="{{ url }}" alt="{{ alt }}">
+      {{ /media }}  
+    </div>
+  </div>
 </div>

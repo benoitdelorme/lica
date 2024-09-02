@@ -1,1 +1,28 @@
-.c-media-grid {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-media-grid {
+  position: relative;
+  background-color: var(--color-sand);
+  width: 100%;
+  padding-block: view-clamp(150px) view-clamp(124px);
+
+  &_title {}
+
+  &_image {
+    position: relative;
+    overflow: hidden;
+
+    &.-image-1 {
+      grid-row: 2 / span 1;
+    }
+    &.-image-2 {
+      grid-row: 1 / span 2;
+    }
+    &.-image-3 {
+      grid-row: 1 / span 1;
+    }
+
+  }
+
+}

@@ -1,3 +1,12 @@
 <div data-component="MediaGrid" class="c-media-grid">
-  
+  <div class="c-media-grid_title o-grid -gutters-x -cols || o-container">
+    <h2 class="c-text -body-section -asterisk || o-grid_item || u-gc-1/5@from-md">
+      {{ title }}
+    </h2>
+    {{ medias }}
+      <div class="c-media-grid_image || o-grid_item {{ if index == 0 }} u-gc-1/5@from-md -image-1 {{ elseif (index == 1) }} u-gc-5/12@from-md  -image-2 {{ else }} u-gc-12/16@from-md -image-3 {{ /if }}">
+        <img class="c-image -cover" src="{{ url }}" alt="{{ alt }}">
+      </div>
+    {{ /medias }}
+  </div>
 </div>

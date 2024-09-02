@@ -1,0 +1,12 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: label
+            field:
+              type: text
+              display: Label
+              localizable: false
