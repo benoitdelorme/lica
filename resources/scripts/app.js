@@ -45,6 +45,7 @@ export default class App {
 	}
 
 	start() {
+		this.componentsManager.mountStatic()
 		this.componentsManager.mount()
 		this.scrollManager.start()
 	}

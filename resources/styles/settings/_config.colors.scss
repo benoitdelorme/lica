@@ -7,11 +7,15 @@
 // ==========================================================================
 
 $colors: (
-    primary:        #F4F4F4,
-    accent:         #00D6AC,
-    grey:           #8A8B8F,
-    lightest:       #F4F4F4,
-    darkest:        #191919,
+    mint:           #00AA78,
+    bottle-m1:      #2F473D,
+    bottle-m2:      #325647,
+    sky:            #C7E3F5,
+    pearl:          #F7F4F3,
+    sand:           #E5E2DF,
+    charcoal:       #3C3D3D,
+    lightest:       #F7F4F3,
+    darkest:        #3C3D3D,
 );
 
 // Function
@@ -47,9 +51,9 @@ $colors: (
 // ==========================================================================
 
 // Link
-$color-link:           color(primary);
-$color-link-focus:     color(primary);
-$color-link-hover:     darken(color(primary), 10%);
+$color-link:           color(charcoal);
+$color-link-focus:     color(mint);
+$color-link-hover:     darken(color(mint), 10%);
 
 // Selection
 $color-selection-text:         color(darkest);

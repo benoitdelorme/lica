@@ -1,3 +1,54 @@
 .c-heading {
-  
+  &.-h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-family: "Source Serif 4";
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  &.-h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+  }
+
+  &.-h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+  }
+
+  &.-h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+  }
+
+  &.-h5 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+  }
+
+  &.-body {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+  }
+
+  &.-body-mini {
+    font-size: var(--font-size-body-mini);
+    line-height: var(--line-height-body-mini);
+  }
+
+  &.-button {
+    font-size: var(--font-size-button);
+    line-height: var(--line-height-button);
+  }
+
+  &.-mini {
+    font-size: var(--font-size-mini);
+    line-height: var(--line-height-mini);
+  }
+
+  &.-epigraph {
+    font-size: var(--font-size-epigraph);
+    line-height: var(--line-height-epigraph);
+  }
 }

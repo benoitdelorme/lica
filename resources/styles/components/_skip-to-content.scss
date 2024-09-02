@@ -13,7 +13,8 @@
   top: 1rem; 
   left: 2rem;
   background-color: var(--color-accent); 
-
+  display: none;
+  
   &:focus-visible {
     transform: translateY(0);  
     opacity: 1;  

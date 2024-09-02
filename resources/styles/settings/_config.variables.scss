@@ -7,34 +7,50 @@
 :root {
   // Grid
   --grid-columns: 6;
-  @include responsive-scale(--grid-gutter, 10px, 45px);
-  @include responsive-scale(--grid-margin, 10px, 45px);
+  @include responsive-scale(--grid-gutter, 10px, 50px);
+  @include responsive-scale(--grid-margin, 10px, 50px);
   
   // Font size
-  @include responsive-scale(--font-size-h1, 54px, 130px);
-  @include responsive-scale(--font-size-h2, 45px, 90px);
-  @include responsive-scale(--font-size-h3, 32px, 60px);
-  @include responsive-scale(--font-size-h4, 28px, 50px);
-  @include responsive-scale(--font-size-body, 17px, 19px);
-  @include responsive-scale(--font-size-button, 14px);
+  @include responsive-scale(--font-size-h1, 60px, 126.96px);
+  @include responsive-scale(--font-size-h2, 40px, 80px);
+  @include responsive-scale(--font-size-h3, 35px, 60px);
+  @include responsive-scale(--font-size-h4, 30px, 50px);
+  @include responsive-scale(--font-size-h5, 19px, 25px);
+  @include responsive-scale(--font-size-body, 19px);
+  @include responsive-scale(--font-size-body-mini, 16px);
+  @include responsive-scale(--font-size-button, 16px);
+  @include responsive-scale(--font-size-mini, 12px);
+  @include responsive-scale(--font-size-epigraph, 90px, 190px);
 
   // Line height
-  @include responsive-scale(--line-height-h1, 54.7px, 131.5px);
-  @include responsive-scale(--line-height-h2, 50px, 95px);
-  @include responsive-scale(--line-height-h3, 38px, 65px);
-  @include responsive-scale(--line-height-h4, 34px, 60px);
-  @include responsive-scale(--line-height-body, 23.3px, 26px);
-  @include responsive-scale(--line-height-button, 17px);
+  @include responsive-scale(--line-height-h1, 60px, 114px);
+  @include responsive-scale(--line-height-h2, 45px, 80px);
+  @include responsive-scale(--line-height-h3, 70px, 70px);
+  @include responsive-scale(--line-height-h4, 35px, 55px);
+  @include responsive-scale(--line-height-h5, 28px, 45px);
+  @include responsive-scale(--line-height-body, 28px);
+  @include responsive-scale(--line-height-body-mini, 22px);
+  @include responsive-scale(--line-height-button, 20px);
+  @include responsive-scale(--line-height-mini, 18px);
+  @include responsive-scale(--line-height-epigraph, 90px,190px);
+
   
   @media (min-width: $from-sm) {
     --grid-columns: #{$base-column-nb};
   }
 
-  &[data-theme="dark"] {
-    --color-primary:    #{color(primary)};
-    --color-accent:     #{color(accent)};
-    --color-text:       #{color(lightest)};
-    --color-background: #{color(darkest)};
-    --color-grey:       #{color(grey)};
+  &[data-theme="light"] {
+    --color-mint:          #{color(mint)};
+    --color-bottle-m1:     #{color(bottle-m1)};
+    --color-bottle-m2:     #{color(bottle-m2)};
+    --color-sky:           #{color(sky)};
+    --color-pearl:         #{color(pearl)};
+    --color-sand:          #{color(sand)};
+    --color-charcoal:      #{color(charcoal)};
+    --color-lightest:      #{color(lightest)};
+    --color-darkest:       #{color(darkest)};
+    --color-background:    #{color(sand)};
+    --color-text:          #{color(charcoal)};
   }
+
 }

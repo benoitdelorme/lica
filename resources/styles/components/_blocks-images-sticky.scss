@@ -1,1 +1,26 @@
-.c-blocks-images-sticky {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+@use "@!/components/blocks-images-sticky/abstract" as *;
+
+.c-blocks-images-sticky {
+  &_blocks {
+    position: relative;
+    margin-top: calc(9.27734375vh);
+    @include responsive-scale(padding-top, 100px);
+  }
+
+  &_images {
+    position: sticky;
+    height: 100vh;
+    width: 100%;
+  }
+
+  &_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + var(--grid-margin));
+    height: 100%;
+    z-index: 1;
+  }
+}

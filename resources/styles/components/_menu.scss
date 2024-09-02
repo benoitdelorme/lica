@@ -1,0 +1,10 @@
+.c-menu {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--color-sky);
+  z-index: 50;
+  display: none;
+}

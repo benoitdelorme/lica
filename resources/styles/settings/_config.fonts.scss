@@ -4,6 +4,7 @@
 
 // Font fallbacks (retrieved from systemfontstack.com on 2022-05-31)
 // ==========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 $font-fallback-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir,
   segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
@@ -23,7 +24,43 @@ $font-fallback-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
 // <font-name> <font-file-basename> <font-weight> <font-style>
 // ```
 $font-faces: (
-  ("Switzer", "Switzer-Regular", 400, normal),
+  /* ("Source Serif 4", "SourceSerif4-Black", 900, normal),
+  ("Source Serif 4", "SourceSerif4-BlackItalic", 900, italic),
+  ("Source Serif 4", "SourceSerif4-ExtraBoldItalic", 800, italic),
+  ("Source Serif 4", "SourceSerif4-ExtraBold", 800, normal),
+  ("Source Serif 4", "SourceSerif4-BoldItalic", bold, italic),
+  ("Source Serif 4", "SourceSerif4-Bold", bold, normal),
+  ("Source Serif 4", "SourceSerif4-ExtraLightItalic", 200, italic),
+  ("Source Serif 4", "SourceSerif4-ExtraLight", 200, normal),
+  ("Source Serif 4", "SourceSerif4-Italic", 400, italic),
+  ("Source Serif 4", "SourceSerif4-Light", 300, normal),
+  ("Source Serif 4", "SourceSerif4-LightItalic", 300, italic),
+  ("Source Serif 4", "SourceSerif4-Medium", 500, normal),
+  ("Source Serif 4", "SourceSerif4-MediumItalic", 500, italic),
+  ("Source Serif 4", "SourceSerif4-Regular", 400, normal),
+  ("Source Serif 4", "SourceSerif4-SemiBold", 600, normal),
+  ("Source Serif 4", "SourceSerif4-SemiBoldItalic", 600, italic),
+  ("Source Serif 4", "SourceSerif4-Thin", 100, normal),
+  ("Source Serif 4", "SourceSerif4-ThinItalic", 100, italic), */
+
+  ("Inter", "Inter-BlackItalic", 900, italic),
+  ("Inter", "Inter-Black", 900, normal),
+  ("Inter", "Inter-ExtraBoldItalic", 800, italic),
+  ("Inter", "Inter-ExtraBold", 800, normal),
+  ("Inter", "Inter-BoldItalic", bold, italic),
+  ("Inter", "Inter-Bold", bold, normal),
+  ("Inter", "Inter-ExtraLightItalic", 200, italic),
+  ("Inter", "Inter-ExtraLight", 200, normal),
+  ("Inter", "Inter-Italic", 400, italic),
+  ("Inter", "Inter-Light", 300, normal),
+  ("Inter", "Inter-LightItalic", 300, italic),
+  ("Inter", "Inter-Medium", 500, normal),
+  ("Inter", "Inter-MediumItalic", 500, italic),
+  ("Inter", "Inter-Regular", 400, normal),
+  ("Inter", "Inter-SemiBold", 600, normal),
+  ("Inter", "Inter-SemiBoldItalic", 600, italic),
+  ("Inter", "Inter-Thin", 100, normal),
+  ("Inter", "Inter-ThinItalic", 100, italic),
 );
 
 // Map of font families.
@@ -32,7 +69,8 @@ $font-faces: (
 // <font-id>: (<font-name>, <font-fallbacks>)
 // ```
 $font-families: (
-  sans: join("Switzer", $font-fallback-sans, $separator: comma),
+  sans: join("Inter", $font-fallback-sans, $separator: comma),
+  /* serif: join("Source Serif 4", $font-fallback-sans, $separator: comma), */
 );
 
 // Font directory

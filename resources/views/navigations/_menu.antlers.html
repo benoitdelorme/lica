@@ -1,3 +1,16 @@
-<div class="c-menu">
-
-</div>
+<nav data-component="Menu" class="c-menu">
+  <ul class="c-menu_list">
+    {{ nav:menu }}
+      <li class="c-menu_item">
+        <a href="{{ url }}" class="c-menu_link">{{ title }}</a>
+      </li>
+    {{ /nav:menu }}
+  </ul>
+  <ul>
+    {{ locales self="false" }}
+      <li class="c-header_navigation_list_item">
+        <a class="c-header_entry" data-no-swup href="{{ permalink }}">{{ locale:name }}</a>
+      </li>
+    {{ /locales }}
+  </ul>
+</nav>

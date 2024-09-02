@@ -1,0 +1,16 @@
+fr_ca:
+  name: Français
+  url: /
+  locale: fr_CA
+  attributes:
+    bcp_47: fr
+    language: Français
+  lang: fr
+en_us:
+  name: English
+  url: /en
+  locale: en_CA
+  attributes:
+    bcp_47: en
+    language: English
+  lang: en

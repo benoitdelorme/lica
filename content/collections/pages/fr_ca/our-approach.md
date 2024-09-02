@@ -1,7 +1,7 @@
 ---
 id: 93937164-d20b-44d6-a9d4-13fc1ff286d2
 blueprint: page
-title: 'Our Approach'
+title: 'Notre approche'
 blocks:
   -
     id: m0juw5hd
@@ -129,6 +129,6 @@ blocks:
     type: text_media_overlay
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725212884
+updated_at: 1725249777
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 ---

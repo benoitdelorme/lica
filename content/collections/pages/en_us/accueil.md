@@ -1,9 +1,6 @@
 ---
-id: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
-blueprint: page
-title: Home
-updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725212323
+id: 18305224-d4aa-419d-824b-02ed77182186
+origin: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 blocks:
   -
     id: m0jum16n
@@ -100,4 +97,6 @@ blocks:
       - images/image_16.webp
     type: media_grid
     enabled: true
+updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
+updated_at: 1725251372
 ---

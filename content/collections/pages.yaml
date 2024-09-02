@@ -1,5 +1,8 @@
 title: Pages
-propagate: true
+sites:
+  - fr_ca
+  - en_us
+propagate: false
 template: templates/page-builder
 layout: layout
 revisions: false

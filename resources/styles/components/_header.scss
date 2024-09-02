@@ -1,0 +1,58 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-header {
+  position: fixed;
+  right: var(--grid-margin);
+  z-index: 50;
+  top: clamp(rem(10px), 3.95507812vh, 3.95507812vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive-scale("column-gap", 10px, 20px);
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responsive-scale("column-gap", 10px, 20px);
+  }
+
+  &_item {
+    font-size: view-clamp(16px);
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: view-clamp(10px);
+    padding-inline: view-clamp(15px);
+    height: view-clamp(42px);
+    background-color: var(--color-pearl);
+    border-radius: rem(8px);
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px 0px rgba(60, 61, 61, 0.04);
+  }
+
+  &_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: view-clamp(10px);
+    padding-inline: view-clamp(15px);
+    height: view-clamp(42px);
+    background-color: var(--color-charcoal);
+    border-radius: rem(8px);
+    color: var(--color-pearl);
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px 0px rgba(60, 61, 61, 0.04);
+  }
+}

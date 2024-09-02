@@ -2,6 +2,7 @@ admin:
   title: Admin
   permissions:
     - super
+    - 'access fr_ca site'
   preferences:
     nav:
       content:

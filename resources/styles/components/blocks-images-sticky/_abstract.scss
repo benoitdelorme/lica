@@ -1,0 +1,8 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-blocks-image-sticky_abstract {
+  &_text {
+    @include responsive-scale(margin-top, 20px, 60px);
+  }
+}

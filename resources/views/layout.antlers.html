@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="{{ site:locale }}" data-theme="dark" class="cc--darkmode">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="{{ site:attributes:bcp_47 }}" data-lang="{{ site:locale }}" data-theme="light" class="cc--lightmode">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        {{ partial:fragments/seo }}
-        {{ partial:fragments/favicon }}
-        {{ partial:fragments/_tracking }}
+    {{ partial:fragments/seo }}
+    {{ partial:fragments/favicon }}
+    {{ partial:fragments/_tracking }}
 
-        {{ vite src="resources/scripts/app.js" }}
-    </head>
-    <body>
-        {{ partial:navigations/header }}
-        {{ partial:navigations/skip_to_content }}
-
-        <main data-load data-cookie="{{ seo:use_cookie }}">
-            {{ template_content }}
-        </main>
-
-        {{ partial src="navigations/footer" }}
-        {{ partial src="navigations/menu" }}
-        {{ partial src="components/transition" }}
-    </body>
+    {{ vite src="resources/scripts/app.js" }}
+  </head>
+  <body>
+    <div class="root-content">
+      {{ partial:navigations/skip_to_content }}
+      
+      <main data-load data-cookie="{{ seo:use_cookie }}">
+        {{ template_content }}
+      </main>
+      
+      {{ partial:navigations/footer }}
+      {{ partial:navigations/menu }}
+      {{ partial:navigations/header }}
+      {{ partial:components/transition }}
+    </div>
+  </body>
 </html>
