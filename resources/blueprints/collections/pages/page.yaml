@@ -11,6 +11,7 @@ tabs:
               required: true
               validate:
                 - required
+              localizable: false
           -
             import: blocks
   sidebar:
@@ -33,6 +34,22 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+          -
+            handle: background_color
+            field:
+              type: color
+              display: 'Background Color'
+              localizable: false
+              swatches:
+                - '#E5E2DF'
+                - '#C7E3F5'
+                - '#325647'
+                - '#2F473D'
+                - '#00AA78'
+                - '#3C3D3D'
+                - '#F7F4F3'
+              allow_any: false
+              default: '#e5e2df'
   seo:
     display: SEO
     sections:

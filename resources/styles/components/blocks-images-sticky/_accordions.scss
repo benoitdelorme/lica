@@ -4,6 +4,7 @@
 .c-blocks-image-sticky_accordions {
   position: relative;
   z-index: -1;
+  padding-top: view-clamp(75px);
 
   &_top {
     position: relative;

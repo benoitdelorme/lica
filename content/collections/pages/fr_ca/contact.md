@@ -9,8 +9,12 @@ blocks:
       - images/image_13.webp
     blocks:
       -
+        id: m0meeuux
+        title: 'Discutez avec l’un de nos conseillers'
+        type: abstract
+        enabled: true
+      -
         id: m0jvmq9y
-        title: "Discutez avec \Ll’un de nos conseillers"
         items:
           -
             id: m0jvmvwc
@@ -35,7 +39,7 @@ blocks:
           -
             id: m0jvoa8v
             title: Adresse
-            text: "6455, rue Jean-Talon Est #1004 <br> Saint-Léonard,\_QC"
+            text: "6455, rue Jean-Talon Est #1004 Saint-Léonard,\_QC"
             link: 'https://www.google.com/maps/place/6455+Rue+Jean-Talon+E+Bureau+1004,+Saint-Leonard,+QC+H1S+3E8/data=!4m2!3m1!1s0x4cc91e8af8c622a9:0xcff826007228e6ff?sa=X&ved=1t:242&ictx=111'
         type: infos_list
         enabled: true
@@ -60,5 +64,7 @@ blocks:
     type: blocks_images_sticky
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725213812
+updated_at: 1725369183
+parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
+background_color: '#e5e2df'
 ---

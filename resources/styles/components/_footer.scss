@@ -3,7 +3,7 @@
 
 .c-footer {
   background-color: var(--color-bottle-m2);
-  margin-top: view-clamp(124px);
+  //margin-top: view-clamp(124px);
   padding-top: view-clamp(15px);
 
   &_item {
@@ -17,10 +17,6 @@
       justify-content: flex-start;
       align-items: flex-start;
     }
-  }
-
-  &_title {
-    
   }
 
   &_button {

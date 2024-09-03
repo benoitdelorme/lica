@@ -1,0 +1,53 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-blocks-image-sticky_infos-list {
+  position: relative;
+  padding-block: view-clamp(25px) view-clamp(75px);
+
+  &:last-of-type {
+    padding-bottom: view-clamp(173px);
+  }
+
+  &_item {
+    //padding-block: view-clamp(35px);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rem(1px) solid var(--color-charcoal);
+    height: 120px;
+
+    &:first-of-type {
+      border-top: rem(1px) solid var(--color-charcoal);
+    }
+  }
+
+  &_section-title {
+    margin-bottom: view-clamp(40px);
+  }
+
+  &_title {
+    text-transform: uppercase;
+  }
+
+  &_text {
+    font-size: var(--font-size-h5);
+    font-weight: 300;
+    text-align: left;
+    line-height: view-clamp(40px);
+  }
+
+  &_title, &_text {
+    color: var(--color-charcoal);
+  }
+
+  &_button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: view-clamp(80px);
+    width: view-clamp(80px);
+    border-radius: 100%;
+    background-color: var(--color-sand);
+  }
+  
+}
