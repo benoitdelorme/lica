@@ -2,8 +2,63 @@
 @use "@!/utilities/mixins" as *;
 
 .c-hero {
-  margin-top: 300px;
-  @include responsive-scale("--font-size-h1-m1", 20px, 90px);
+  position: relative;
+  height: calc(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
 
-  font-size: var(--font-size-h1-m1);
+  &_title {
+    padding-top: 9.27734375vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18.5546875vh;
+    line-height: 18.5546875vh;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
+    color: var(--color-mint);
+  }
+
+  &_line {
+    //position: relative;
+    z-index: 2;
+
+    &.-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .c-hero_text {
+      transform: translate3d(-17.5vh, 0, 0);
+    }
+  }
+
+  &_text {
+    //position: relative;
+  }
+
+  &_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    clip-path: polygon(
+        58% 56%,
+        calc(58% + 32.2265625vh) 56%,
+        calc(58% + 32.2265625vh) calc(56% + 15.0390625vh),
+        58% calc(56% + 15.0390625vh)
+    );
+
+    .c-image {
+      transform: scale(0.37) translateX(45vh) translateY(64vh);
+    }
+  }
 }

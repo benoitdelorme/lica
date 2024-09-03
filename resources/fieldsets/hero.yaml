@@ -5,6 +5,7 @@ fields:
     field:
       type: section
       display: Hero
+      localizable: false
   -
     handle: background_color
     field:
@@ -19,17 +20,19 @@ fields:
       allow_any: false
       type: color
       display: 'Background Color'
+      localizable: false
   -
     handle: content
     field:
       fullscreen: false
-      remove_empty_nodes: false
+      remove_empty_nodes: true
       type: bard
       display: Content
       buttons:
         - alignleft
         - aligncenter
         - alignright
+      localizable: false
       sets:
         image:
           display: 'Image Effect'
@@ -40,19 +43,21 @@ fields:
               icon: media-image-picture-orientation
               fields:
                 -
-                  handle: text
+                  handle: text_image
                   field:
                     type: text
                     display: Text
                     width: 50
+                    localizable: false
                 -
-                  handle: assets_field
+                  handle: image
                   field:
                     max_files: 1
                     container: assets
                     type: assets
-                    display: 'Assets Field'
+                    display: Image
                     width: 50
+                    localizable: false
   -
     handle: anchor
     field: common.anchor

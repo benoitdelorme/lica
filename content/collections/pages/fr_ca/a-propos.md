@@ -34,6 +34,8 @@ blocks:
                 type: image
                 text: 'c’est de'
                 assets_field: images/image_12.webp
+                image: images/image_12.webp
+                text_image: 'c’est de'
           -
             type: paragraph
             attrs:
@@ -167,6 +169,7 @@ blocks:
     type: media_grid
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725249788
+updated_at: 1725370933
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
+background_color: '#e5e2df'
 ---

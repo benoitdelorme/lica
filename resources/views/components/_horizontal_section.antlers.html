@@ -1,3 +1,5 @@
 <div data-component="HorizontalSection" class="c-horizontal-section">
-  
+  {{ blocks }}
+    {{ partial:if_exists src="components/{type}" }}
+  {{ /blocks }}
 </div>

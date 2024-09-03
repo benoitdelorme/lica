@@ -12,6 +12,7 @@
   
   // Font size
   --font-size-h1: #{view-clamp(60px, 126.96px)};
+  --font-size-h1-m1: #{view-clamp(190.53px)};
   --font-size-h2: #{view-clamp(40px, 80px)};
   --font-size-h3: #{view-clamp(35px, 60px)};
   --font-size-h4: #{view-clamp(30px, 50px)};
@@ -25,6 +26,7 @@
 
   // Line height
   --line-height-h1: #{view-clamp(60px, 114px)};
+  --line-height-h1-m1: #{view-clamp(60px, 238.2px)};
   --line-height-h2: #{view-clamp(45px, 80px)};
   --line-height-h3: #{view-clamp(35px, 70px)};
   --line-height-h4: #{view-clamp(28px, 55px)};

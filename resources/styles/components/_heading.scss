@@ -7,6 +7,13 @@
     font-family: "Source Serif 4";
   }
 
+  &.-h1-m1 {
+    font-size: var(--font-size-h1-m1);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
+  }
+
   &.-h2 {
     font-size: var(--font-size-h2);
     line-height: var(--line-height-h2);
