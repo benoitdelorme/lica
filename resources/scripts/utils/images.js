@@ -1,9 +1,11 @@
 import imagesLoaded from 'imagesloaded'
 
-const preloadImages = (selector = 'img') => {
-  return new Promise((resolve) => {
-    imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve)
-  })
+const preloadImages = (dom) => {
+  if(dom) {
+    return new Promise((resolve) => {
+      imagesLoaded(dom, {background: true}, resolve)
+    })
+  }
 }
 
 export { 

@@ -1,28 +1,30 @@
 <div data-component="Hero" class="c-hero" style="--color-background: {{ background_color }}">
   <h1 class="c-hero_title">
     {{ content }}
-
+      
       <span class="c-hero_line">
         {{ text }}
       </span>
 
       {{ if type == "image" }}
-        <span class="c-hero_line -image">
+        <span class="c-hero_line -image {{ if !text_image }} -centered {{ /if }}">
           {{ if text_image }}
             <span class="c-hero_text"> 
               {{ text_image }}
             </span>
-
-            {{ image }}
-              <span class="c-hero_image">
-                <img class="c-image -cover" src="{{ image.url }}" alt="">
-              </span>
-            {{ /image }}
-              
+            {{ else }}
+            <span class="c-hero_text"> 
+              &nbsp;
+            </span>
           {{ /if }}
+          {{ image }}
+            <span class="c-hero_image {{ if !text_image }} -centered {{ /if }}">
+              <img class="c-image -cover" src="{{ image.url }}" alt="">
+            </span>
+          {{ /image }}
         </span>
-
       {{ /if }}
+
     {{ /content }}
 
   </h1>

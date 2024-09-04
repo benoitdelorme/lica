@@ -1,5 +1,9 @@
 <div data-component="HorizontalSection" class="c-horizontal-section">
-  {{ blocks }}
-    {{ partial:if_exists src="components/{type}" }}
-  {{ /blocks }}
+  <div data-ref="wrapper" class="c-horizontal-section_wrapper">
+    {{ blocks }}
+      <div data-ref="blocks" class="c-horizontal-section_block">
+          {{ partial:if_exists src="components/{type}" :preload="1" :isHorizontal="1" }}
+      </div>
+    {{ /blocks }}
+  </div>
 </div>

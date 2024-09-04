@@ -21,10 +21,10 @@ blocks:
           -
             type: set
             attrs:
-              id: m0juwmor
+              id: m0myxe8m
               values:
                 type: image
-                assets_field: images/image_12.webp
+                image: images/image_12.webp
           -
             type: paragraph
             attrs:
@@ -108,7 +108,7 @@ blocks:
             type: item
             enabled: true
         type: accordions
-        enabled: true
+        enabled: false
     type: horizontal_section
     enabled: true
   -
@@ -129,6 +129,7 @@ blocks:
     type: text_media_overlay
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725249777
+updated_at: 1725407907
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
+background_color: '#e5e2df'
 ---

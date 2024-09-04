@@ -1,1 +1,17 @@
-.c-media {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-media {
+  position: relative;
+  height: 100%;
+
+  &:not(-is-vertical) {
+    width: view-clamp(640px);
+  }
+
+  &.-is-vertical {
+    padding-block: view-clamp(200px);
+    padding-inline: var(--grid-margin);
+    width: 100%;
+  }
+}

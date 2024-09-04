@@ -1,3 +1,57 @@
 <div data-component="ProfilListing" class="c-profil-listing">
-  
+  <div class="c-profil-listing_items || o-container">
+    {{ profils }}
+      <div class="c-profil-listing_item || o-grid -gutters -cols">
+        <div class="c-profil-listing_photo || o-grid_item u-gc-1/2">
+          <img class="c-image -cover" src="{{ photo.url }}" alt="{{ photo.alt }}">
+        </div>
+        <h2 class="c-profil-listing_fullname || c-text -body-large || o-grid_item u-gc-2/7">
+          {{ full_name }}
+        </h2>
+        <p class="c-profil-listing_position || c-text -body-mini || o-grid_item u-gc-7/10">
+          {{ position }}
+        </p>
+        <div class="c-profil-listing_photo-hover || o-grid_item u-gc-10/14">
+          <div class="c-profil-listing_photo-hover_wrapper">
+            <img class="c-image -cover" src="{{ photo.url }}" alt="{{ photo.alt }}">
+          </div>
+        </div>
+        <div class="c-profil-listing_arrow || o-grid_item u-gc-15/16">
+          <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8183 0.0440568C11.1213 0.0440511 11.3669 0.289655 11.3669 0.592625L11.3669 1.42355C11.3669 4.15647 13.564 6.37664 16.289 6.41274C16.3115 6.41247 16.334 6.41236 16.3565 6.41236C16.6595 6.41237 16.905 6.65793 16.9051 6.96091C16.9051 6.96878 16.9049 6.97655 16.9046 6.98431C16.8927 7.27677 16.6519 7.51029 16.3565 7.51029C16.3339 7.51029 16.3115 7.51021 16.289 7.50994C13.564 7.54603 11.3669 9.76624 11.3669 12.4991L11.3669 13.3293C11.3669 13.6321 11.1213 13.8778 10.8184 13.8778C10.5154 13.8778 10.2697 13.6322 10.2697 13.3292V12.4991C10.2697 10.4822 11.2508 8.6942 12.7618 7.5866L0.713322 7.58664C0.410403 7.58659 0.164799 7.34099 0.164748 7.03807C0.164753 6.73509 0.410375 6.48947 0.713351 6.48946L12.981 6.48945C11.3463 5.39805 10.2697 3.53642 10.2697 1.42356L10.2697 0.592625C10.2697 0.289661 10.5153 0.0440568 10.8183 0.0440568Z" fill="#00AA78"/>
+          </svg>            
+        </div>
+      </div>
+    {{ /profils }}
+  </div>
+  <div class="c-profil-listing_popup">
+    <div class="c-profil-listing_popup_inner">
+      {{ profils }}
+        <div class="c-profil-listing_popup_pannel">
+          <div class="c-profil-listing_popup_picture">
+            <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+          </div>
+          <button class="c-profil-listing_popup_close">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.65 14.25L0.25 12.85L5.85 7.25L0.25 1.65L1.65 0.25L7.25 5.85L12.85 0.25L14.25 1.65L8.65 7.25L14.25 12.85L12.85 14.25L7.25 8.65L1.65 14.25Z" fill="#3C3D3D"/>
+            </svg>            
+          </button>
+          <div class="c-profil-listing_popup_content">
+            <div class="c-profil-listing_popup_fullname || c-heading -h2"> {{ full_name }} </div>
+            <div class="c-profil-listing_popup_position || c-text -body-large"> {{ position }} </div>
+            <ul class="c-profil-listing_popup_links">
+              {{ links }}
+              <li class="c-profil-listing_popup_link">
+                <span class="c-profil-listing_popup_link_text || c-text -body-mini">{{ title }}</span>
+                <a class="c-profil-listing_popup_link_url || c-text -body-large" href="{{ button.button_link }}">
+                  <span>{{ button.button_text }}</span>
+                </a>
+              </li>
+              {{ /links }}
+            </ul>
+          </div>
+        </div>
+      {{ /profils }}
+    </div>
+  </div>
 </div>

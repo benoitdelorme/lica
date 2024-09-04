@@ -4,13 +4,14 @@
 .c-hero {
   position: relative;
   height: calc(100%);
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--color-background);
 
   &_title {
-    padding-top: 9.27734375vh;
+    //padding-top: 9.27734375vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +25,6 @@
   }
 
   &_line {
-    //position: relative;
     z-index: 2;
 
     &.-image {
@@ -37,10 +37,10 @@
     .c-hero_text {
       transform: translate3d(-17.5vh, 0, 0);
     }
-  }
 
-  &_text {
-    //position: relative;
+    &.-centered {
+      padding: 10vh 0;
+    }
   }
 
   &_image {
@@ -50,15 +50,27 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    clip-path: polygon(
-        58% 56%,
-        calc(58% + 32.2265625vh) 56%,
-        calc(58% + 32.2265625vh) calc(56% + 15.0390625vh),
-        58% calc(56% + 15.0390625vh)
-    );
+    
+    &:not(.-centered) {
+      clip-path: polygon(
+        58% 52%,
+        calc(58% + 32.2265625vh) 52%,
+        calc(58% + 32.2265625vh) calc(52% + 15.0390625vh),
+        58% calc(52% + 15.0390625vh)
+      );
 
-    .c-image {
-      transform: scale(0.37) translateX(45vh) translateY(64vh);
+      .c-image {
+        transform: scale(.37) translateX(55vh) translateY(46vh);
+      }
     }
+
+    &.-centered {
+      clip-path: inset(40% 36% 38% 36%);
+
+      .c-image {
+        transform: scale(.33);
+      }
+    }
+    
   }
 }

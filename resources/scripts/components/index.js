@@ -5,7 +5,12 @@ import { MediaGrid } from '@/components/MediaGrid'
 import { Menu } from '@/components/Menu'
 import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
-import { HorizontalSection } from './HorizontalSection'
+import { HorizontalSection } from '@/components/HorizontalSection'
+import { Date } from '@/components/Date'
+import { Media } from '@/components/Media'
+import { Magazine } from '@/components/Magazine'
+import { ProfilListing } from '@/components/ProfilListing'
+import { ContentColumns } from '@/components/ContentColumns'
 
 export const componentsList = {
   "Hero": Hero,
@@ -16,4 +21,9 @@ export const componentsList = {
   "Menu": Menu,
   "HorizontalSection": HorizontalSection,
   "Footer": Footer,
+  "Date": Date,
+  "Media": Media,
+  "Magazine": Magazine,
+  "ProfilListing": ProfilListing,
+  "ContentColumns": ContentColumns,
 }

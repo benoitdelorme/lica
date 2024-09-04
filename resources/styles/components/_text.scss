@@ -11,6 +11,12 @@
     font-weight: 400;
   }
 
+  &.-body-large {
+    font-size: var(--font-size-body-large);
+    line-height: var(--line-height-body-large);
+    font-weight: 400;
+  }
+
   &.-body-mini {
     font-size: var(--font-size-body-mini);
     line-height: var(--line-height-body-mini);

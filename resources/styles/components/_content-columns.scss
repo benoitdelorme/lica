@@ -1,0 +1,23 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-content-columns {
+  position: relative;
+
+  &_inner {
+    padding-top: 15.62500vh;
+    padding-inline: view-clamp(119px) view-clamp(109px);
+    max-width: view-clamp(942px);
+  }
+
+  &_title {
+    
+  }
+
+  &_text {
+    padding-top: 7.8125vh;
+    columns: 2;
+    column-gap: view-clamp(18px);
+    color: var(--color-charcoal-light);
+  }
+}

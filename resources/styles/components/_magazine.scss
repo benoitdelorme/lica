@@ -1,0 +1,62 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-magazine {
+  position: relative;
+  min-width: view-clamp(1512px);
+  width: 100vw;
+  min-height: 100vh;
+  padding-block: 15.62500vh 12.109375vh;
+  padding-inline: view-clamp(52px);
+  display: flex;
+
+  &_inner {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &_image {
+    position: relative;
+    overflow: hidden;
+
+    &.-image-1 {
+      position: relative;
+      width: 35.1388889vw;
+      min-width: view-clamp(506px);
+      max-height: 100%;
+    }
+
+    &.-image-2 {
+      position: relative;
+      height: calc(52.7027027%);
+      width: 19.0972222vw;
+      min-width: view-clamp(228px);
+      max-height: 100%;
+    }
+
+    img { 
+      position: absolute;
+    }
+  }
+
+  &_section-title {
+
+  }
+
+  &_title {
+    
+  }
+
+  &_content {
+    padding-inline: 3.54166667vw 5.62500vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_text {
+    color: var(--color-charcoal-light);
+  }
+  
+}

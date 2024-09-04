@@ -1,7 +1,7 @@
 {{# Blocks Looooooop #}}
 {{ if blocks }}
   {{ blocks }}
-    {{ partial:if_exists src="components/{type}" }}
+    {{ partial:if_exists src="components/{type}" :preload="0" }}
   {{ /blocks }}
   {{ else }}
     <div>no blocks or antlers component found.</div>

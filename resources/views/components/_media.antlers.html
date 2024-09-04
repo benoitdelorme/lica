@@ -1,3 +1,12 @@
-<div data-component="Media" class="c-media">
-  
+<div data-component="Media" data-options='{"preload": {{ preload }}}' class="c-media {{ if !isHorizontal }}-is-vertical{{ /if}}">
+  <div class="c-media_wrapper">
+    {{ media }}
+      {{ if is_image }}
+        <img class="c-image -cover" src="{{ url }}" alt="{{ alt }}">
+        
+        {{ else }}
+          <video class="c-video -cover" autoplay muted playsinline loop src="{{ url }}"></video>
+      {{ /if }}
+    {{ /media }}
+  </div>
 </div>

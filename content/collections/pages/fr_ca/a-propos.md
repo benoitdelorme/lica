@@ -34,7 +34,7 @@ blocks:
                 type: image
                 text: 'c’est de'
                 assets_field: images/image_12.webp
-                image: images/image_12.webp
+                image: images/image_12-1725404412.webp
                 text_image: 'c’est de'
           -
             type: paragraph
@@ -145,6 +145,8 @@ blocks:
     enabled: true
     profils:
       - 4675a3b3-ef9e-4824-a263-8342a38326a1
+      - dcff6e6d-0f47-4d14-a0ef-3a5229b1cdbc
+      - def09acc-a854-4d14-992d-3da21c3c7609
   -
     id: m0jvkb8s
     title: 'Imaginez une retraite où vous pouvez vivre sans soucis financiers.'
@@ -169,7 +171,7 @@ blocks:
     type: media_grid
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725370933
+updated_at: 1725404417
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 background_color: '#e5e2df'
 ---

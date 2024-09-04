@@ -4,10 +4,16 @@
 .c-media-grid {
   position: relative;
   background-color: var(--color-sand);
-  width: 100%;
   padding-block: view-clamp(150px) view-clamp(124px);
+  width: 100%;
 
-  &_title {}
+  &.-media-2 {
+    .c-media-grid_image {
+      &.-image-1 img {
+        aspect-ratio: 480 / 480;
+      }
+    }
+  }
 
   &_image {
     position: relative;

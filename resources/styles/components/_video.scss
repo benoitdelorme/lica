@@ -1,0 +1,11 @@
+.c-video {
+  &.-cover {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &.-top {
+    object-position: top;
+  }
+}
