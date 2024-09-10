@@ -3,12 +3,18 @@
 
 .c-hero {
   position: relative;
-  height: calc(100%);
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  width: 200vw;
   background-color: var(--color-background);
+
+  &_inner {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &_title {
     //padding-top: 9.27734375vh;
@@ -26,7 +32,7 @@
 
   &_line {
     z-index: 2;
-
+    
     &.-image {
       display: flex;
       justify-content: center;
@@ -50,6 +56,16 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.15);
+    }
     
     &:not(.-centered) {
       clip-path: polygon(
@@ -65,10 +81,10 @@
     }
 
     &.-centered {
-      clip-path: inset(40% 36% 38% 36%);
+      //clip-path: inset(40% 36% 38% 36%);
 
       .c-image {
-        transform: scale(.33);
+        //transform: scale(.33);
       }
     }
     

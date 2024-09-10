@@ -3,6 +3,7 @@ import Component from "@/abstracts/Component"
 export const Footer = class Footer extends Component {
 	constructor(config) {
 		super(config, [ () => import('@!c/_footer.scss') ])
+		this.isStatic = true
 	}
 
 	mount() {

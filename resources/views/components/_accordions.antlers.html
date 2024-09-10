@@ -1,0 +1,19 @@
+<div data-component="Accordions" class="c-accordions">
+  <div data-ref="inner" class="c-accordions_inner">
+    {{ accordions }}
+      <div data-ref="items" class="c-accordions_item">
+        <div class="c-accordions_item_header">
+          <div class="c-accordions_item_index || c-heading -h4">
+            {{ if ((index + 1) < 10) }}0{{ /if }}{{ index + 1 }}.
+          </div>
+          <h2 data-ref="titles" class="c-accordions_item_title || c-text -body-mini">
+            {{ title }}
+          </h2>
+        </div>
+        <div  data-ref="texts" class="c-accordions_item_text || c-heading -h2">
+          {{ text }}
+        </div>
+      </div>
+    {{ /accordions }}
+  </div>
+</div>

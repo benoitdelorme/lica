@@ -1,0 +1,11 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-scroll-indicator {
+  position: fixed;
+  width: view-clamp(20px);
+  height: view-clamp(32px);
+  right: view-clamp(50px);
+  bottom: view-clamp(40px);
+  z-index: 50;
+}

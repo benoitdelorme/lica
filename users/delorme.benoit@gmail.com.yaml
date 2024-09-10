@@ -8,3 +8,6 @@ preferences:
       after_save: continue_editing
     profiles:
       after_save: continue_editing
+  assets:
+    assets:
+      mode: grid

@@ -14,7 +14,6 @@ export default class ComponentsManager {
 
     this.DOM = {}
     this.components = []
-    this.componentsStatic = []
     this.sizes = new Sizes()
     
     this.setEvents()
@@ -30,9 +29,7 @@ export default class ComponentsManager {
     return this.components.find(component => component.uID === uID)
   }
 
-  mountStatic() {
-
-  }
+  mountStatic() {}
 
   mount(container = document) {
     this.DOM.components = [...container.querySelectorAll('[data-component]')]
@@ -71,7 +68,6 @@ export default class ComponentsManager {
       window.components = this.components
       window.eventBus = this.eventBus
       console.log("Components", this.components)
-      console.log("Components static", this.componentsStatic)
     }
   }
 

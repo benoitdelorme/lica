@@ -1,1 +1,36 @@
-.c-text-media-overlay {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-text-media-overlay {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+
+  &_inner {
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &_text {
+    margin-top: view-clamp(20px);
+    max-width: view-clamp(822px);
+    margin-inline: auto;
+  }
+
+  &_button {
+    margin-top: view-clamp(20px);
+    color: var(--color-charcoal);
+  }
+
+  &_media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+}

@@ -1,3 +1,18 @@
 <div data-component="TextMediaOverlay" class="c-text-media-overlay">
-  
+  <div data-ref="inner" class="c-text-media-overlay_inner || o-grid -gutters-x -cols || o-container">
+    <h2 class="c-text-media-overlay_title || c-heading -h1 || o-grid_item u-gc-4/13">{{ title }}</h2>
+    <div class="c-text-media-overlay_text || c-text -body || o-grid_item u-gc-4/13">
+      {{ text }}
+    </div>
+    <div class="o-grid_item u-gc-4/13">
+      <a href="{{ button.button_link }}" class="c-text-media-overlay_button || c-button -arrow">
+        {{ button.button_text }}
+      </a>
+    </div>
+  </div>
+  {{ media }}
+    <div data-ref="mediaContainer" class="c-text-media-overlay_media">
+      <video data-ref="media" autoplay muted loop playsinline class="c-video -cover" src="{{ url }}"></video>
+    </div>
+  {{ /media }}
 </div>

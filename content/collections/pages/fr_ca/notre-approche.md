@@ -108,7 +108,7 @@ blocks:
             type: item
             enabled: true
         type: accordions
-        enabled: false
+        enabled: true
     type: horizontal_section
     enabled: true
   -
@@ -125,11 +125,11 @@ blocks:
       button_text: 'Contactez-nous maintenant'
       button_link: 'http://google.com'
     media:
-      - videos/video_2.mp4
+      - videos/video_3.mp4
     type: text_media_overlay
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725407907
+updated_at: 1725935668
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 background_color: '#e5e2df'
 ---

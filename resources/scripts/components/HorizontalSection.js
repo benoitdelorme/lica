@@ -8,11 +8,15 @@ export const HorizontalSection = class HorizontalSection extends Component {
 	}
 
 	mount() {
+		this.init()
+	}
+
+	async init() {
 		this.blockCount = 0
 		this.blockLoaded = 0
 
 		this.initEvents()
-
+		
 		if(!Array.isArray(this.DOM.blocks)) {
 			this.DOM.blocks = [this.DOM.blocks]
 		}
@@ -35,7 +39,9 @@ export const HorizontalSection = class HorizontalSection extends Component {
 				totalWidth += block.offsetWidth
 		})
 
-		gsap.to(this.DOM.wrapper, {
+		let scrollTween = null
+
+		scrollTween = gsap.to(this.DOM.wrapper, {
 				x: () => `-${totalWidth - window.innerWidth}px`, // Scroll à gauche jusqu'à la fin des panels
 				ease: 'linear',
 				scrollTrigger: {
@@ -44,10 +50,12 @@ export const HorizontalSection = class HorizontalSection extends Component {
 					start: 'top top',
 					end: () => `+=${totalWidth}`,
 					scrub: true,
-					pin: true,
+					pin: this.DOM.root,
 					invalidateOnRefresh: true,
 				}
 		})
+		
+		this.eventBus.emit("horizontal-section-created", scrollTween)
 	}
 
 	initEvents() {

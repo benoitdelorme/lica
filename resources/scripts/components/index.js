@@ -11,6 +11,9 @@ import { Media } from '@/components/Media'
 import { Magazine } from '@/components/Magazine'
 import { ProfilListing } from '@/components/ProfilListing'
 import { ContentColumns } from '@/components/ContentColumns'
+import { Accordions } from '@/components/Accordions'
+import { TextMediaOverlay } from '@/components/TextMediaOverlay'
+import { ScrollIndicator } from '@/components/ScrollIndicator'
 
 export const componentsList = {
   "Hero": Hero,
@@ -26,4 +29,7 @@ export const componentsList = {
   "Magazine": Magazine,
   "ProfilListing": ProfilListing,
   "ContentColumns": ContentColumns,
+  "Accordions": Accordions,
+  "TextMediaOverlay": TextMediaOverlay,
+  "ScrollIndicator": ScrollIndicator,
 }
