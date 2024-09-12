@@ -43,8 +43,10 @@ export function splitText(el, type, kerning = true) {
 
 const $html = document.documentElement
 const $body = document.body
+const $rootContent = $body.querySelector(".root-content")
 
 export {
   $html,
   $body,
+  $rootContent,
 }

@@ -1,0 +1,21 @@
+<h1 data-version="{{ version }}" data-ref="title" class="c-hero_title">
+  <span data-ref="lines" class="c-hero_line">
+    {{ text_1 }}
+  </span>
+
+  <span class="c-hero_line -image">
+      <span data-ref="lines" class="c-hero_text"> 
+        &nbsp;
+      </span>
+
+    {{ image }}
+      <span data-ref="imageContainer" class="c-hero_image" data-clip-path="inset(40% 36% 38% 36%)" data-transform="scale(.33)">
+        <img data-ref="image" class="c-image -cover" src="{{ image.url }}" alt="">
+      </span>
+    {{ /image }}
+  </span>
+
+  <span data-ref="lines" class="c-hero_line">
+    {{ text_2 }}
+  </span>
+</h1>

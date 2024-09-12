@@ -14,6 +14,8 @@ import { ContentColumns } from '@/components/ContentColumns'
 import { Accordions } from '@/components/Accordions'
 import { TextMediaOverlay } from '@/components/TextMediaOverlay'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
+import { Logo } from '@/components/Logo'
+import { Logo as BlocksImagesStickyLogo } from '@/components/BlocksImagesSticky/Logo'
 
 export const componentsList = {
   "Hero": Hero,
@@ -32,4 +34,6 @@ export const componentsList = {
   "Accordions": Accordions,
   "TextMediaOverlay": TextMediaOverlay,
   "ScrollIndicator": ScrollIndicator,
+  "Logo": Logo,
+  "BlocksImagesStickyLogo": BlocksImagesStickyLogo,
 }

@@ -1,37 +1,5 @@
-<div data-component="Hero" class="c-hero" style="--color-background: {{ background_color }}">
+<div data-component="Hero" class="c-hero -{{version}}" style="--color-background: {{ background_color }}">
   <div data-ref="inner" class="c-hero_inner">
-    <h1 class="c-hero_title" style="{{ if (background_color == "#C7E3F5") }} color: var(--color-charcoal); {{ /if }}">
-      
-      {{ content }}
-
-        {{ if text }}
-          <span data-ref="lines" class="c-hero_line">
-            {{ text }}
-          </span>
-        {{ /if }}
-
-        {{ if type == "image" }}
-          <span class="c-hero_line -image {{ if !text_image }} -centered {{ /if }}">
-            {{ if text_image }}
-              <span class="c-hero_text"> 
-                {{ text_image }}
-              </span>
-              {{ else }}
-              <span class="c-hero_text"> 
-                &nbsp;
-              </span>
-            {{ /if }}
-  
-            {{ image }}
-              <span data-ref="imageContainer" class="c-hero_image {{ if !text_image }} -centered {{ /if }}" {{ if !text_image }} data-clip-path="inset(40% 36% 38% 36%)" data-scale="0.33" {{ else }}  {{ /if }}>
-                <img data-ref="image" class="c-image -cover" src="{{ image.url }}" alt="">
-              </span>
-            {{ /image }}
-          </span>
-        {{ /if }}
-  
-      {{ /content }}
-  
-    </h1>
+    {{ partial:if_exists src="components/hero/_{version}" }}
   </div>
 </div>

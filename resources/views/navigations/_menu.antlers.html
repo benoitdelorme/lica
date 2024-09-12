@@ -1,16 +1,22 @@
-<nav data-component="Menu" class="c-menu">
-  <ul class="c-menu_list">
-    {{ nav:menu }}
-      <li class="c-menu_item">
-        <a href="{{ url }}" class="c-menu_link">{{ title }}</a>
-      </li>
-    {{ /nav:menu }}
-  </ul>
-  <ul>
-    {{ locales self="false" }}
-      <li class="c-header_navigation_list_item">
-        <a class="c-header_entry" data-no-swup href="{{ permalink }}">{{ locale:name }}</a>
-      </li>
-    {{ /locales }}
-  </ul>
+<nav data-component="Menu" class="c-menu is-hidden">
+  <div data-ref="background" class="c-menu_background"></div>
+  <div data-ref="menu" class="c-menu_inner">
+    <ul class="c-menu_list || o-container">
+      {{ nav:menu }}
+        <li data-ref="items" class="c-menu_item">
+          <a href="{{ url }}" class="c-menu_link">
+            <span class="c-menu_link_index" >{{ if ((index + 1) < 10) }}0{{ /if }}{{ index + 1 }}</span>
+            <span class="c-menu_link_text || c-heading -h3">{{ title }}</span>
+          </a>
+        </li>
+      {{ /nav:menu }}
+    </ul>
+    <ul class="c-menu_lang">
+      {{ locales self="false" }}
+        <li class="c-menu_item_lang">
+          <a class="c-menu_entry" data-no-swup href="{{ permalink }}">{{ locale:name }}</a>
+        </li>
+      {{ /locales }}
+    </ul>
+  </div>
 </nav>

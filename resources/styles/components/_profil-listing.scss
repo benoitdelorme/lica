@@ -90,7 +90,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 60;
-    display: none;
+    
     &_pannel {
       position: absolute;
       top: 0;
@@ -108,6 +108,7 @@
       width: 22.2222222vw;
       background-color: transparent;
       margin-top: view-clamp(40px);
+      overflow: hidden;
     }
 
     &_close {

@@ -3,7 +3,7 @@ id: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 blueprint: page
 title: Accueil
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725293795
+updated_at: 1725998942
 blocks:
   -
     id: m0jum16n
@@ -76,6 +76,7 @@ blocks:
         title: 'Votre avenir financier, notre expertise'
     type: blocks_images_sticky
     enabled: true
+    with_logo_introduction: true
   -
     id: m0jusieu
     title: "Bâtissez vos rêves financiers \Lgrâce au 30 ans d'expertise de Planification Lica"
@@ -100,4 +101,5 @@ blocks:
       - images/image_16.webp
     type: media_grid
     enabled: true
+background_color: '#e5e2df'
 ---

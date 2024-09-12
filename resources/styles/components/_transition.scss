@@ -1,3 +1,27 @@
 .c-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  flex-direction: column;
+  display: none;
+  --color-random: var(--color-sand);
   
+  &_column {
+    position: relative;
+    width: 100%;
+    height: calc(100% / 10);
+    overflow: hidden;
+
+    &_inner {
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-random);
+    }
+  }
 }

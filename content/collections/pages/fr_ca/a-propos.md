@@ -46,6 +46,12 @@ blocks:
                 text: famille
         type: hero
         enabled: true
+        version: version_2
+        text_1: 'La gestion'
+        text_2: 'de patrimoine'
+        image: images/image_12-1725404412.webp
+        text_3: 'c’est de'
+        text_4: famille
       -
         id: m0jvb09n
         date: 1990
@@ -171,7 +177,7 @@ blocks:
     type: media_grid
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725404417
+updated_at: 1725973376
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 background_color: '#e5e2df'
 ---

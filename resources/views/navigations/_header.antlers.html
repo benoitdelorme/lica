@@ -11,10 +11,15 @@
       </li>
     {{ /nav:navigation }}
   </ul>
-  <button class="c-header_button">
+  <button data-ref="action" class="c-header_button">
     <span class="c-header_button_text">Menu</span>
-    <svg class="c-header_button_icon" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span class="c-header_button_icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    {{# <svg class="c-header_button_icon" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.5 12.1364V10.6364H17.5V12.1364H0.5ZM0.5 7.25176V5.75181H17.5V7.25176H0.5ZM0.5 2.36716V0.867188H17.5V2.36716H0.5Z" fill="#F7F4F3"/>
-    </svg>
+    </svg> #}}
   </button>
 </div>

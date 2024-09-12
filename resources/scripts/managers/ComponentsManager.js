@@ -29,7 +29,9 @@ export default class ComponentsManager {
     return this.components.find(component => component.uID === uID)
   }
 
-  mountStatic() {}
+  mountStatic() {
+    
+  }
 
   mount(container = document) {
     this.DOM.components = [...container.querySelectorAll('[data-component]')]

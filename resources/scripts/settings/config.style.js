@@ -4,8 +4,9 @@ export const STYLE = getComputedStyle($body)
 
 export const COLORS = {
 	mint: 			STYLE.getPropertyValue('--color-mint'),
+	bottle1: 		STYLE.getPropertyValue('--color-bottle-m1'),
+	bottle2: 		STYLE.getPropertyValue('--color-bottle-m2'),
 	pearl: 			STYLE.getPropertyValue('--color-pearl'),
-	charcoal: 	STYLE.getPropertyValue('--color-charcoal'),
 	sky: 				STYLE.getPropertyValue('--color-sky'),
 	sand: 			STYLE.getPropertyValue('--color-sand'),
 }

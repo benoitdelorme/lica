@@ -1,7 +1,7 @@
 <div data-component="ProfilListing" class="c-profil-listing">
   <div class="c-profil-listing_items || o-container">
     {{ profils }}
-      <div class="c-profil-listing_item || o-grid -gutters -cols">
+      <div data-ref="items" class="c-profil-listing_item || o-grid -gutters -cols">
         <div class="c-profil-listing_photo || o-grid_item u-gc-1/2">
           <img class="c-image -cover" src="{{ photo.url }}" alt="{{ photo.alt }}">
         </div>
@@ -24,14 +24,14 @@
       </div>
     {{ /profils }}
   </div>
-  <div class="c-profil-listing_popup">
+  <div data-ref="popup" class="c-profil-listing_popup is-hidden">
     <div class="c-profil-listing_popup_inner">
       {{ profils }}
-        <div class="c-profil-listing_popup_pannel">
-          <div class="c-profil-listing_popup_picture">
-            <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+        <div data-ref="panels" class="c-profil-listing_popup_pannel is-hidden">
+          <div data-ref="pictures" class="c-profil-listing_popup_picture">
+            <img data-ref="picturesSources" src="{{ photo.url }}" alt="{{ photo.alt }}">
           </div>
-          <button class="c-profil-listing_popup_close">
+          <button data-ref="closes" class="c-profil-listing_popup_close">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.65 14.25L0.25 12.85L5.85 7.25L0.25 1.65L1.65 0.25L7.25 5.85L12.85 0.25L14.25 1.65L8.65 7.25L14.25 12.85L12.85 14.25L7.25 8.65L1.65 14.25Z" fill="#3C3D3D"/>
             </svg>            

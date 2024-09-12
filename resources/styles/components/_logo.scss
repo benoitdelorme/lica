@@ -1,0 +1,46 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  pointer-events: none;
+  
+  &_inner {
+    position: relative;
+    height: 100%;
+    width: calc(55% - 2 * var(--grid-margin));
+    margin-left: var(--grid-margin);
+  }
+
+  &_lica {
+    position: absolute;
+    min-width: rem(65.88px);
+    top: clamp(rem(10px), 3.95507812vh, 3.95507812vh);
+    left: 0;
+    max-width: initial;
+  }
+
+  &_planification {
+    position: absolute;
+    min-width: rem(65.86px);
+    left: 0;
+    transform: translateY(3px);
+    top: clamp(rem(10px), 3.95507812vh, 3.95507812vh);
+    max-width: initial;
+  }
+}
+
+.c-logo-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  left: var(--grid-margin);
+  top: clamp(rem(10px), 3.95507812vh, 3.95507812vh);
+}

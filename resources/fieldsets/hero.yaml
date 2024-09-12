@@ -7,57 +7,62 @@ fields:
       display: Hero
       localizable: false
   -
-    handle: background_color
+    handle: version
     field:
-      swatches:
-        - '#C7E3F5'
-        - '#325647'
-        - '#2F473D'
-        - '#00AA78'
-        - '#3C3D3D'
-        - '#E5E2DF'
-        - '#F7F4F3'
-      allow_any: false
-      type: color
-      display: 'Background Color'
+      options:
+        -
+          key: version_1
+          value: 'Version 1'
+        -
+          key: version_2
+          value: 'Version 2'
+      default: version_1
+      type: select
+      display: Version
       localizable: false
   -
-    handle: content
+    handle: text_1
     field:
-      fullscreen: false
-      remove_empty_nodes: true
-      type: bard
-      display: Content
-      buttons:
-        - alignleft
-        - aligncenter
-        - alignright
+      type: text
+      display: 'Text 1'
       localizable: false
-      sets:
-        image:
-          display: 'Image Effect'
-          icon: media-image-picture-orientation
-          sets:
-            image:
-              display: Content
-              icon: media-image-picture-orientation
-              fields:
-                -
-                  handle: text_image
-                  field:
-                    type: text
-                    display: Text
-                    width: 50
-                    localizable: false
-                -
-                  handle: image
-                  field:
-                    max_files: 1
-                    container: assets
-                    type: assets
-                    display: Image
-                    width: 50
-                    localizable: false
+      width: 50
+  -
+    handle: text_2
+    field:
+      type: text
+      display: 'Text 2'
+      localizable: false
+      width: 50
+  -
+    handle: text_3
+    field:
+      type: text
+      display: 'Text 3'
+      localizable: false
+      width: 50
+      if:
+        version: 'equals version_2'
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image
+      localizable: false
+      width: 50
+      validate:
+        - image
+  -
+    handle: text_4
+    field:
+      type: text
+      display: 'Text 4'
+      localizable: false
+      width: 50
+      if:
+        version: 'equals version_2'
   -
     handle: anchor
     field: common.anchor

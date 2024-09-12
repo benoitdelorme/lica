@@ -35,6 +35,10 @@ blocks:
                 text: Approche
         type: hero
         enabled: true
+        version: version_1
+        text_1: Notre
+        text_2: Approche
+        image: images/image_12.webp
       -
         id: m0juyvla
         section_title: 'notre approche'
@@ -129,7 +133,7 @@ blocks:
     type: text_media_overlay
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1725935668
+updated_at: 1725975434
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 background_color: '#e5e2df'
 ---

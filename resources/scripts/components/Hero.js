@@ -17,8 +17,9 @@ export const Hero = class Hero extends Component {
 	}
 
 	init() {
-		this.clipPathValueStart = this.DOM.imageContainer.getAttribute("data-clip-path")
-		this.scaleValueStart 		= this.DOM.imageContainer.getAttribute("data-scale")
+		this.clipPathValueStart 		= this.DOM.imageContainer.getAttribute("data-clip-path")
+		this.transformValueStart 		= this.DOM.imageContainer.getAttribute("data-transform")
+		this.version 								= this.DOM.title.getAttribute("data-version")
 	}
 
 	events() {
@@ -57,28 +58,41 @@ export const Hero = class Hero extends Component {
 				containerAnimation: scrollTween,
 			}
 		})
-
+		
 		this.tl2.from(this.DOM.imageContainer, {
 			ease: "power2.out",
 			clipPath: this.clipPathValueStart
-		},  0.01)
-
+		}, 0.01)
+		
 		this.tl2.from(this.DOM.image, {
 			ease: "power2.out",
-			scale: this.scaleValueStart
+			transform: this.transformValueStart
 		}, 0)
 
-		this.tl2.to(this.DOM.lines[0], {
-			ease: "power3.out",
-			yPercent: 100,
-			color: COLORS.pearl
-		}, 0)
+		if(this.version == "version_1") {
+			this.tl2.to(this.DOM.lines[0], {
+				ease: "power3.out",
+				yPercent: 100,
+				color: COLORS.pearl
+			}, 0)
 
-		this.tl2.to(this.DOM.lines[1], {
-			ease: "power3.out",
-			yPercent: -100,
-			color: COLORS.pearl
-		}, 0)
+			this.tl2.to(this.DOM.lines[2], {
+				ease: "power3.out",
+				yPercent: -100,
+				color: COLORS.pearl
+			}, 0)
+		}
+		else {
+			this.tl2.to(this.DOM.lines, {
+				ease: "power3.out",
+				color: COLORS.pearl
+			}, 0)
+
+			this.tl2.from(this.DOM.lines[2], {
+				ease: "power3.out",
+				transform: "translate3d(-17.5vh,0,0)"
+			}, 0)
+		}
 
 	}
 

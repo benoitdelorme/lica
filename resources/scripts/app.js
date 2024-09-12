@@ -39,14 +39,15 @@ export default class App {
 	init() {
 		this.eventBus = new EventBus()
 		this.scrollManager = new ScrollManager()
-		this.transitionManager = new TransitionManager()
 		this.componentsManager = new ComponentsManager()
+		this.transitionManager = new TransitionManager()
 		this.trackerManager = new TrackerManager()
 	}
 
 	start() {
 		this.componentsManager.mountStatic()
 		this.componentsManager.mount()
+		this.transitionManager.start()
 		this.scrollManager.start()
 	}
 }

@@ -5,12 +5,20 @@ fields:
     field:
       type: section
       display: 'Blocks / Images Sticky'
+      localizable: false
   -
     handle: preview
     field:
       type: layout_preview
       display: Preview
       hide_display: true
+      localizable: false
+  -
+    handle: with_logo_introduction
+    field:
+      type: toggle
+      display: 'Logo introduction'
+      localizable: false
   -
     handle: images
     field:
@@ -18,11 +26,13 @@ fields:
       container: assets
       type: assets
       display: Images
+      localizable: false
   -
     handle: blocks
     field:
       type: replicator
       display: Blocks
+      localizable: false
       sets:
         new_set_group:
           display: Blocks
