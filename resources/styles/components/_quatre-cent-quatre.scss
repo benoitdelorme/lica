@@ -1,0 +1,38 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-quatre-cent-quatre {
+  background-color: var(--color-bottle-m1);
+  color: var(--color-mint);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  overflow: hidden;
+
+  &_inner {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_content {
+    text-align: center;
+    color: var(--color-pearl);
+  }
+
+  &_text {
+    max-width: view-clamp(822px);
+    margin: 0 auto; 
+    color: var(--color-pearl);
+  }
+
+  &_button {
+    color: var(--color-pearl);
+    margin-top: view-clamp(20px);
+
+    &:before {
+      color: var(--color-pearl);
+    }
+  }
+}

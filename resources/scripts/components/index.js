@@ -18,6 +18,8 @@ import { Logo } from '@/components/Logo'
 import { Logo as BlocksImagesStickyLogo } from '@/components/BlocksImagesSticky/Logo'
 import { HeroSimple } from '@/components/HeroSimple'
 import { Sections } from '@/components/Sections'
+import { Marquee } from '@/components/Marquee'
+import { QuatreCentQuatre } from '@/components/QuatreCentQuatre'
 
 export const componentsList = {
   "Hero": Hero,
@@ -40,4 +42,6 @@ export const componentsList = {
   "BlocksImagesStickyLogo": BlocksImagesStickyLogo,
   "HeroSimple": HeroSimple,
   "Sections": Sections,
+  "Marquee": Marquee,
+  "QuatreCentQuatre": QuatreCentQuatre,
 }

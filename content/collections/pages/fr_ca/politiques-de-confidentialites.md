@@ -5,7 +5,7 @@ title: 'Politiques de Confidentialités'
 blocks:
   -
     id: m13q3rzr
-    title: 'Politique <br> de  confidentialité'
+    title: 'Politique de <br> confidentialité'
     type: hero_simple
     enabled: true
   -
@@ -376,7 +376,7 @@ blocks:
     type: sections
     enabled: true
 updated_by: 42c739f7-a694-4a15-b75d-660b2cebde95
-updated_at: 1726415351
+updated_at: 1726415856
 parent: 1bdaf079-fe1a-4f12-a0ec-3d5b6be1e0dd
 background_color: '#e5e2df'
 ---

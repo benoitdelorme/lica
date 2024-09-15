@@ -1,0 +1,41 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-marquee {
+  position: relative;
+  /* font-size: var(--font-size-emphasis);
+  line-height: var(--line-height-emphasis);
+  color: var(--color-primary); */
+  overflow: hidden;
+
+  &_inner {
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: flex-start;
+  }
+
+  &_item {
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      width: 60px;
+      min-width: 60px;
+      margin: 0 80px;
+    }
+
+    div {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+     /*  span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      } */
+    }
+  }
+}
