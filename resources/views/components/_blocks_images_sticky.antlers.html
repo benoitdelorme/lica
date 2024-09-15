@@ -20,8 +20,8 @@
     <div class="o-grid_item || u-gc-9/16@from-md">
       <div class="c-blocks-images-sticky_images">
         {{ images }}
-          <div class="c-blocks-images-sticky_image" style="z-index:{{ 3 -index }};">
-            <img class="c-image -cover -center" src="{{ url }}" alt="{{ alt }}">
+          <div data-ref="imagesWrappers" class="c-blocks-images-sticky_image" style="z-index:{{ 3 -index }};">
+            <img data-ref="imagesSources" class="c-blocks-images-sticky_image_source || c-image -cover -center" src="{{ url }}" alt="{{ alt }}">
           </div>
         {{ /images }}
       </div>

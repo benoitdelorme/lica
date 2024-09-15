@@ -6,7 +6,7 @@
     
     {{ medias }}
       <div class="c-media-grid_image || o-grid_item {{ if index == 0 }} u-gc-1/5@from-md -image-1 {{ elseif (index == 1) }} {{ if (medias | count) > 2 }} u-gc-5/12@from-md {{ else }} u-gc-6/16@from-md {{ /if }}  -image-2 {{ else }} u-gc-12/16@from-md -image-3 {{ /if }}">
-        <img class="c-image -cover" src="{{ url }}" alt="{{ alt }}">
+        <img class="c-image -cover -full" src="{{ url }}" alt="{{ alt }}">
       </div>
     {{ /medias }}
   </div>

@@ -1,1 +1,17 @@
-.c-sections {}
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-sections {
+  position: relative;
+  background-color: var(--color-sky);
+
+  &_section {
+    padding-block: view-clamp(50px);
+
+    p, h1, h2, h3, h4, h5 {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

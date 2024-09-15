@@ -1,0 +1,12 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-hero-simple {
+  position: relative;
+  padding-block: view-clamp(250px) view-clamp(125px);
+  background-color: var(--color-sky);
+
+  &_inner {
+    text-align: center;
+  }
+}

@@ -36,9 +36,7 @@ export const Accordions = class Accordions extends Component {
     this.tl1?.kill()
     this.tl2?.kill()
     
-    gsap.set(this.DOM.root, {clearProps: true})
-    gsap.set(this.DOM.items[1], {clearProps: true})
-    gsap.set(this.DOM.items[2], {clearProps: true})
+    gsap.set([this.DOM.root, this.DOM.items[1], this.DOM.items[2]], { clearProps: true })
 
     this.hideTexts()
   }
@@ -120,6 +118,6 @@ export const Accordions = class Accordions extends Component {
   }
 
 	resize() {
-		
+		super.resize()
 	}
 }

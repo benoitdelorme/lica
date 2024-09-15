@@ -60,6 +60,10 @@
       grid-template-columns: repeat(8, 1fr);
   }
 
+  &.-col-12 {
+      grid-template-columns: repeat(12, 1fr);
+  }
+
   &.-col-#{$base-column-nb}\@from-md {
       @media (min-width: $from-md) {
           grid-template-columns: repeat(#{$base-column-nb}, 1fr);

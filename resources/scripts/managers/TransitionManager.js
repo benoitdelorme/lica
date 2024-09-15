@@ -1,6 +1,6 @@
 import Swup from 'swup';
 import gsap from 'gsap';
-import { $html } from '@/utils/dom'
+import { $html, $body } from '@/utils/dom'
 import EventBus from '@/abstracts/EventBus'
 import ComponentsManager from '@/managers/ComponentsManager'
 import ScrollManager from '@/managers/ScrollManager'
@@ -58,6 +58,8 @@ export default class TransitionManager {
     gsap.delayedCall(1, () => {
       this.eventBus.emit("page-open")
     })
+    gsap.fromTo($body, { opacity: 0 }, { opacity: 1, duration: 0.3, delay: 0.3, ease: "linear" })
+    $body.classList.remove("is-invisible")
   }
 
   onOut(visit) {
@@ -68,10 +70,8 @@ export default class TransitionManager {
       gsap.set(this.DOM.root, { "--color-random": this.COLORS[Math.floor(Math.random() * this.COLORS.length)] })
       
       gsap.fromTo(this.DOM.columns, { yPercent: 100 }, { yPercent: 0, duration: 0.7, stagger: { amount: 0.3,from: "end" }, ease: "power2.out", onComplete: () => {
-        this.eventBus.emit("page-view")
-        this.eventBus.emit("menu-close", 1)
+        this.eventBus.emit("menu-close", 1) 
         window.scrollTo(0, 0)
-
         this.componentsManager.unmount()
         this.scrollManager.stop()
         this.scrollManager.removeScrollTriggerEvents()
@@ -84,8 +84,11 @@ export default class TransitionManager {
 
   onIn(visit) {
     this.componentsManager.mount($html.querySelector(visit.containers[0]))
+    
+    this.eventBus.emit("is-loading")
 
     return new Promise((resolve) => {
+      gsap.fromTo(visit.containers[0], { opacity: 0 }, { opacity: 1, duration: 0.3, delay: 0.3, ease: "linear" })
       gsap.to(this.DOM.columns, { yPercent: -101, duration: 0.9, stagger: { amount: 0.3, from: "end" }, ease: "power2.out", onComplete: () => {
         this.eventBus.emit("page-view")
         $html.classList.remove("is-loading")

@@ -1,6 +1,7 @@
 import Component from "@/abstracts/Component"
 import { preloadImages } from "@/utils/images"
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { COLORS } from '@/settings/config.style'
 
 export const Hero = class Hero extends Component {
@@ -24,6 +25,7 @@ export const Hero = class Hero extends Component {
 
 	events() {
     this.eventBus.on("horizontal-section-created", (scrollTween) => {
+			this.resetAnimations()
       this.initScroll(scrollTween)
     })
   }
@@ -33,6 +35,7 @@ export const Hero = class Hero extends Component {
 
 		this.tl1 = gsap.timeline({
 			scrollTrigger: {
+				id: "heroTransformX",
 				trigger: this.DOM.root,
 				start: "top top",
 				scrub: true,
@@ -50,6 +53,7 @@ export const Hero = class Hero extends Component {
 
 		this.tl2 = gsap.timeline({
 			scrollTrigger: {
+				id: "heroTransformScale",
 				trigger: this.DOM.root,
 				start: "top top",
 				scrub: true,
@@ -93,10 +97,29 @@ export const Hero = class Hero extends Component {
 				transform: "translate3d(-17.5vh,0,0)"
 			}, 0)
 		}
-
 	}
 
+	resetAnimations() {
+    if(ScrollTrigger.getById("heroTransformX")) 
+			ScrollTrigger.getById("heroTransformX").kill()
+
+    if(ScrollTrigger.getById("heroTransformScale")) 
+			ScrollTrigger.getById("heroTransformScale").kill()
+
+    gsap.killTweensOf(this.DOM.imageContainer)
+    gsap.killTweensOf(this.DOM.image)
+    gsap.killTweensOf(this.DOM.lines[0])
+    gsap.killTweensOf(this.DOM.lines[1])
+    gsap.killTweensOf(this.DOM.lines[2])
+    gsap.killTweensOf(this.DOM.root)
+
+    this.tl1?.kill()
+    this.tl2?.kill()
+    
+    gsap.set([this.DOM.imageContainer, this.DOM.image, this.DOM.lines[0], this.DOM.lines[1], this.DOM.lines[2], this.DOM.root], {clearProps: true})
+  }
+
 	resize() {
-		
+		super.resize()
 	}
 }

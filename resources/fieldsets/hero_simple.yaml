@@ -1,0 +1,14 @@
+title: 'Hero Simple'
+fields:
+  -
+    handle: hero_section
+    field:
+      type: section
+      display: Hero
+      localizable: false
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      localizable: false

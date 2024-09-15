@@ -10,7 +10,11 @@ import { parseString } from '@/utils/string'
 // <div data-ref="box" data-anim="lines">
 // </div> 
 export function lines(item) {
+  let options = { start: "top bottom-=20%", end: "top bottom-=20%", delay: 0 }
   const splittedItem = splitText(item, 'lines')
+
+  if(item.dataset.options)
+    options = Object.assign(options, parseString(item.dataset.options))
 
   const tl = gsap.timeline({onComplete: () => {
     splittedItem.revert()
@@ -23,7 +27,32 @@ export function lines(item) {
   return ScrollTrigger.create({
     trigger: splittedItem.elements,
     animation: tl,
-    ...TRIGGERBASE
+    start: "top bottom",
+    end: "top bottom",
+    toggleActions: 'play none none none',
+    once: true,
+  })
+}
+
+export function fadeYIn(item) {
+  let options = { start: "top bottom-=20%", end: "top bottom-=20%", delay: 0 }
+  const tl = gsap.timeline()
+
+  if(item.dataset.options)
+    options = Object.assign(options, parseString(item.dataset.options))
+
+  tl.add(core.staggerY(item), 0)
+  tl.add(core.fadeIn(item), 0)
+  tl.pause()
+
+  return ScrollTrigger.create({
+    trigger: item,
+    animation: tl,
+    start: options.start,
+    end: options.end,
+    delay: options.delay,
+    toggleActions: 'play none none none',
+    once: true,
   })
 }
 

@@ -13,6 +13,7 @@ fields:
         - h2
         - h3
         - h4
+        - h5
         - bold
         - italic
         - unorderedlist

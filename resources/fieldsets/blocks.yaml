@@ -6,6 +6,7 @@ fields:
       type: section
       display: 'Page Builder'
       instructions: 'Add blocks using the + button.'
+      localizable: false
   -
     handle: blocks
     field:
@@ -14,6 +15,7 @@ fields:
       hide_display: true
       collapse: true
       fullscreen: false
+      localizable: false
       sets:
         blocks:
           display: null
@@ -66,3 +68,9 @@ fields:
               fields:
                 -
                   import: sections
+            hero_simple:
+              display: 'Hero Simple'
+              icon: align-object-top
+              fields:
+                -
+                  import: hero_simple

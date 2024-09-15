@@ -1,7 +1,7 @@
 import Component from "@/abstracts/Component"
 
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import { $html } from '@/utils/dom'
 
 export const Logo = class Logo extends Component {
@@ -16,27 +16,26 @@ export const Logo = class Logo extends Component {
 	}
 
 	events() {
-		this.eventBus.on("page-open", this.initState.bind(this))
+		this.eventBus.on("is-loading", this.initState.bind(this))
 	}
 
 	initState() {
+		/* Check if there a logo in BlocksImagesSticky */
 		const blockLogo = $html.querySelector("[data-component='BlocksImagesStickyLogo']")
-
+		
 		if(blockLogo) {
-			gsap.set(this.DOM.root, { opacity: 0 })
-		}else {
-			gsap.set(this.DOM.root, { opacity: 1 })
+			this.hideLogo()
+		} 
+		else {
+			this.showLogo()
 		}
 	}
 
 	showLogo() {
-		console.log("ici")
-		gsap.to(this.DOM.root, { opacity: 1, duration: 0.6, ease: "linear" })
+		gsap.set(this.DOM.root, { opacity: 1 })
 	}
 
 	hideLogo() {
-		console.log("la")
-		gsap.killTweensOf(this.DOM.root)
 		gsap.set(this.DOM.root, { opacity: 0 })
 	}
 

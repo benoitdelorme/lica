@@ -1,8 +1,8 @@
 import Component from "@/abstracts/Component"
 
-export const Abstract = class Abstract extends Component {
+export const HeroSimple = class HeroSimple extends Component {
 	constructor(config) {
-		super(config, [ () => import('@!c/_abstract.scss') ])
+		super(config, [ () => import('@!c/_hero-simple.scss') ])
 	}
 	
 	mount() {

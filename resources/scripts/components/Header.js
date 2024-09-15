@@ -13,10 +13,9 @@ export const Header = class Header extends Component {
 
 	events() {
 		this.DOM.action.addEventListener("click", this.onToggleMenu.bind(this))
-
 		this.eventBus.on("menu-is-open", this.toggle.bind(this))
 	}
-
+	
 	toggle(isOpen) {
 		isOpen ? this.open() : this.close()
 	}

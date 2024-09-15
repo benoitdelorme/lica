@@ -14,10 +14,13 @@ export const Logo = class Logo extends Component {
 
 	initScrollAnimation() {
 
-		const width = window.innerWidth / 2 - 40
+		const widthPlan = this.DOM.planification.clientWidth
+		const widthLica = this.DOM.lica.clientWidth
 
+		console.log(widthPlan)
+		
 		gsap.fromTo(this.DOM.planification, {
-			width: width,
+			width: widthPlan,
 			transform: "translateY(0)",
 		}, { 
 			width: "65.86px",
@@ -34,7 +37,7 @@ export const Logo = class Logo extends Component {
 		})
 
 		gsap.fromTo(this.DOM.lica, {
-			width: width,
+			width: widthLica,
 			yPercent: -100,
 			top: `${window.innerHeight - 40}`,
 		}, { 

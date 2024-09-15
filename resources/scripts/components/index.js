@@ -16,6 +16,8 @@ import { TextMediaOverlay } from '@/components/TextMediaOverlay'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { Logo } from '@/components/Logo'
 import { Logo as BlocksImagesStickyLogo } from '@/components/BlocksImagesSticky/Logo'
+import { HeroSimple } from '@/components/HeroSimple'
+import { Sections } from '@/components/Sections'
 
 export const componentsList = {
   "Hero": Hero,
@@ -36,4 +38,6 @@ export const componentsList = {
   "ScrollIndicator": ScrollIndicator,
   "Logo": Logo,
   "BlocksImagesStickyLogo": BlocksImagesStickyLogo,
+  "HeroSimple": HeroSimple,
+  "Sections": Sections,
 }

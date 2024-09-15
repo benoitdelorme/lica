@@ -8,10 +8,17 @@ export const TextMediaOverlay = class TextMediaOverlay extends Component {
 	}
 
 	mount() {	
-		setTimeout(() => {
+		this.initScroll()
+	}
+
+	initScroll() {
+		clearTimeout(this.state.timeout)
+		
+		this.state.timeout = setTimeout(() => {
 			this.tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: this.DOM.root,
+					id: "textMediaOverlayAnimation",
 					start: 'top top',
 					end: () => `+=${2 * window.innerHeight}`,
 					scrub: true,
@@ -39,14 +46,29 @@ export const TextMediaOverlay = class TextMediaOverlay extends Component {
 			
 			ScrollTrigger.refresh()
 		}, 500)
-		
 	}
 
-	unmount() {
+	unmount() {}
+
+	resetAnimation() {
+		clearTimeout(this.state.timeout)
+
+		if(ScrollTrigger.getById("textMediaOverlayAnimation")) 
+			ScrollTrigger.getById("textMediaOverlayAnimation").kill()
 		
+		gsap.killTweensOf(this.DOM.root)
+		gsap.killTweensOf(this.DOM.mediaContainer)
+		gsap.killTweensOf(this.DOM.media)
+
+		this.tl?.kill()
+
+		gsap.set([this.DOM.root, this.DOM.mediaContainer, this.DOM.media], { clearProps: true })
 	}
 
 	resize() {
 		super.resize()
+
+		this.resetAnimation()
+		this.initScroll()
 	}
 }

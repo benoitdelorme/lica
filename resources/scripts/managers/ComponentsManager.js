@@ -62,7 +62,7 @@ export default class ComponentsManager {
       }
 
       if(!IS_DEBUG) {
-        element.removeAttribute('data-component')
+        //element.removeAttribute('data-component')
       }
     })
     

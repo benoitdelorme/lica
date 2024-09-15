@@ -1,11 +1,18 @@
 .c-image {
   &.-cover {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
   }
 
   &.-top {
     object-position: top;
+  }
+
+  &.-center {
+    object-position: top;
+  }
+
+  &.-full {
+    height: 100%;
+    width: 100%;
   }
 }

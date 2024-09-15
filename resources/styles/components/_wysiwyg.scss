@@ -1,0 +1,52 @@
+@use "@!/tools/functions" as *;
+@use "@!/utilities/mixins" as *;
+
+.c-wysiwyg {
+  h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
+  }
+
+  h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "Source Serif 4";
+  }
+
+  h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+  }
+
+  h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    font-family: "Source Serif 4";
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+    font-weight: 400;
+  }
+
+  p {
+    margin-bottom: view-clamp(20px);
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin-bottom: view-clamp(20px);
+  }
+
+  ul {
+    padding-left: view-clamp(25px);
+    padding-block: view-clamp(20px);
+  }
+
+}
